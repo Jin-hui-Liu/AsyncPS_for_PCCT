@@ -6,6 +6,7 @@ The provided .act file contains the counter's CHP and the corresponding testbenc
 
 ### Transistor-level simulation
 The provided .act files contain the counter's PRS, which is manually synthesized from the CHP. Given the makefile, you can get the SPICE netlist (.sp) by running:
+
 `make prs2net`
 
 After this, a SPICE simulator can be used to simulate the netlist, such as Eldo, Xyce, PSpice, etc.
