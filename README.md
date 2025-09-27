@@ -5,5 +5,5 @@ This repository contains all key source codes developed during Jinhui Liu's mast
 
 Each part of the work contains its own README file with its set of instructions, file structure and source codes. This repository consists of two main parts:
 
-<img src="System_Schematic_pile_up" width="45%"/>
+<img src="System_Schematic_pile_up.png" width="45%"/>
 <img src="Pile-up-identifier.png" width="45%"/>
