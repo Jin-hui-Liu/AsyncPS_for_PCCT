@@ -1,0 +1,53 @@
+# Run this script using: interact -Tsky130l test.src
+
+# Read the top-level file
+act:read "counter_b4.act"
+
+# Merge in the 'cells.act' file
+act:merge "cells.act"
+
+# Expand the design
+act:expand
+
+# Set the top-level for the implementation
+act:top four_bits_counter
+
+# Map it to gates and save all cells to an act file
+ckt:cell-map
+
+# Generate the transistor-level netlist from the PRS
+ckt:map
+
+
+# Set density to 55%
+define density 0.55
+# Calculate total area to be occupied per unit of effective area (1 / 0.55), multiply with 1.05 for another 5% area margin
+define area (* 1.05 (/ 1 density))
+
+# Load physical database module and create a pnr problem
+load-scm "phydb.scm"
+phydb:create area 1.0 "counter.lef"
+
+# Use dali to place cells and generate a DEF file for Magic, indicating the location information
+dali:init 3
+dali:place-design density
+dali:place-io "met1"
+dali:export-phydb
+dali:close
+
+# Power routing
+pwroute:init 3
+pwroute:set_reinforcement 0
+pwroute:run
+pwroute:export-phydb
+pwroute:close
+
+# Plan the rest routing and output a guide file
+sproute:init 3
+sproute:run
+sproute:close
+
+phydb:write-guide "counter.guide"
+phydb:write-def "counter.def"
+phydb:write-aux-rect "counter"
+phydb:update-lef "counter"

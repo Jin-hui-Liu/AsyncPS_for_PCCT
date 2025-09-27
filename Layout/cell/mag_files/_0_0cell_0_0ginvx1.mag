@@ -1,0 +1,44 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1753015926
+<< checkpaint >>
+rect -1140 -780 1680 1800
+rect -1140 -1170 1560 -780
+rect -1140 -1200 1485 -1170
+<< nmos >>
+rect 195 90 225 180
+<< pmos >>
+rect 195 285 225 435
+<< ndiff >>
+rect 120 90 195 180
+rect 225 90 300 180
+<< pdiff >>
+rect 120 285 195 435
+rect 225 285 300 435
+<< poly >>
+rect 195 435 225 465
+rect 195 255 225 285
+rect 195 180 225 210
+rect 195 60 225 90
+<< metal1 >>
+rect 120 480 180 540
+rect 240 480 300 540
+rect 360 480 420 540
+rect 120 60 180 120
+<< labels >>
+rlabel ndiff 227 92 227 92 3 out
+rlabel pdiff 227 287 227 287 3 out
+rlabel poly 197 182 197 182 3 in(0)
+rlabel poly 197 257 197 257 3 in(0)
+rlabel ndiff 122 92 122 92 3 GND
+rlabel pdiff 122 287 122 287 3 Vdd
+rlabel metal1 362 482 362 482 3 GND
+port 1 e
+rlabel metal1 242 482 242 482 3 Vdd
+port 2 e
+rlabel metal1 122 62 122 62 3 out
+port 3 e
+rlabel metal1 122 482 122 482 3 in(0)
+port 4 e
+<< end >>

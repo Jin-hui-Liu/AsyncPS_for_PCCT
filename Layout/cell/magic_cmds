@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#if [ $# -lt 2 ]
+#then
+#	echo "Usage: $0 <magfile> <commands>"
+#	exit 1
+#fi
+
+# "dnull" starts magic without graphic
+# "noconsole" uses the calling terminal for terminal-based command-line input
+magic -dnull -noconsole -rcfile /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc <<EOF
+$1
+EOF

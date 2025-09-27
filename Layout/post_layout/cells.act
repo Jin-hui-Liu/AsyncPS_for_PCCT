@@ -1,0 +1,109 @@
+namespace cell {
+
+export defcell g0n1n2n3n4n5naaaaa_0653aaox0 (bool? in[7]; bool! out)
+{
+   prs {
+   in[0]<5> | in[6]<15> & in[5]<15> & in[3]<15> -> out-
+   ~in[0]<45> & ~in[1]<45> & ~in[2]<45> & ~in[3]<45> & ~in[4]<45> & ~in[5]<45> -> out+
+   }
+}
+
+export defcell g0n1n2n3n4naaaa_0536aaox0 (bool? in[7]; bool! out)
+{
+   prs {
+   in[0]<5> | in[5]<15> & in[3]<15> & in[6]<15> -> out-
+   ~in[0]<38> & ~in[1]<38> & ~in[2]<38> & ~in[3]<38> & ~in[4]<38> -> out+
+   }
+}
+
+export defcell g0n1n2n3n4naaao_025a4267aaooax0 (bool? in[8]; bool! out)
+{
+   prs {
+   in[0]<20> & (in[2]<10> & in[5]<20> | in[4]<7> | in[2]<13> & in[6]<27> & in[7]<27>) -> out-
+   ~in[0]<8> | ~in[1]<30> & ~in[2]<30> & ~in[3]<30> & ~in[4]<30> -> out+
+   }
+}
+
+export defcell g0n1n2n3naaa_02ox0 (bool? in[4]; bool! out)
+{
+   prs {
+   in[0]<5> | in[2]<5> -> out-
+   ~in[0]<30> & ~in[1]<30> & ~in[2]<30> & ~in[3]<30> -> out+
+   }
+}
+
+export defcell g0n1n2n3naaa_04256aaaox0 (bool? in[7]; bool! out)
+{
+   prs {
+   in[0]<5> | in[4]<20> & in[2]<20> & in[5]<20> & in[6]<20> -> out-
+   ~in[0]<30> & ~in[1]<30> & ~in[2]<30> & ~in[3]<30> -> out+
+   }
+}
+
+export defcell g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0 (bool? in[10]; bool! out)
+{
+   prs {
+   in[0]<5> | in[8]<10> & in[2]<10> | in[9]<10> & in[2]<10> -> out-
+   ~in[0]<38> & (~in[1]<14> & ~in[2]<28> | ~in[3]<24> & ~in[2]<47> & ~in[4]<47> & ~in[5]<47> | ~in[2]<19> & ~in[6]<38> & ~in[7]<38>) -> out+
+   }
+}
+
+export defcell g0n1n2naa_032aox0 (bool? in[4]; bool! out)
+{
+   prs {
+   in[0]<5> | in[3]<10> & in[2]<10> -> out-
+   ~in[0]<23> & ~in[1]<23> & ~in[2]<23> -> out+
+   }
+}
+
+export defcell ginvx0 (bool? in[1]; bool! out)
+{
+   prs {
+   in[0]<5> -> out-
+   ~in[0]<8> -> out+
+   }
+}
+
+export defcell ginvx1 (bool? in[1]; bool! out)
+{
+   prs {
+   in[0] -> out-
+   ~in[0] -> out+
+   }
+}
+
+export template<pint w,l> defcell p0(bool? in[2]; bool! out) {
+  prs { passp<w,l> (in[0],in[1],out) }
+}
+
+export template<pint w,l> defcell n0(bool? in[2]; bool! out) {
+  prs { passn<w,l> (in[0],in[1],out) }
+}
+
+export template<pint w,l> defcell t0(bool? in[3]; bool! out) {
+  prs { transgate<w,l> (in[0],in[1],in[2],out) }
+}
+
+export defcell p1(bool? in[2]; bool! out) {
+  prs { passp (in[0],in[1],out) }
+}
+
+export defcell n1(bool? in[2]; bool! out) {
+  prs { passn (in[0],in[1],out) }
+}
+
+export defcell t1(bool? in[3]; bool! out) {
+  prs { transgate (in[0],in[1],in[2],out) }
+}
+
+export template<pint w,l> defcell c0(bool in; bool out) {
+  prs { cap<w,l> (in,out) }
+}
+
+export defcell c1(bool in; bool out) {
+  prs { cap (in,out) }
+}
+
+
+
+}

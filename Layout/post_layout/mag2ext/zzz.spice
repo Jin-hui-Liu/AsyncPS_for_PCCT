@@ -1,0 +1,489 @@
+* SPICE3 file created from TOP.ext - technology: sky130l
+
+.global Vdd Gnd 
+
+.subckt x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0 GND Vdd in_6 in_5 in_4 in_3
++ in_2 in_1 out in_0
+x1000 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+x1001 a_15_28# in_2 #11 Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=0.37688p pd=3.6u as=1.26563p ps=7.5u
+x1002 Vdd in_0 a_20_28# Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=0.53438p pd=3.75u as=0.63p ps=3.75u
+x1003 #17 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+x1004 a_106_28# in_4 #9 Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=0.63p pd=3.75u as=1.26563p ps=7.5u
+x1005 #4 in_3 out Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.42188p pd=3u as=0.42188p ps=3u
+x1006 #17 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.53438p ps=3.75u
+x1007 #9 in_5 out Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=1.26563p pd=7.5u as=1.26563p ps=7.5u
+x1008 GND Vdd a_54_14# Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.21938p pd=1.65u as=50.625f ps=0.675u
+x1009 #11 in_3 a_106_28# Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=1.26563p pd=7.5u as=0.63p ps=3.75u
+x1010 Vdd GND a_54_28# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1011 a_54_14# #17 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+x1012 a_54_28# #17 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+x1013 a_20_28# in_1 a_15_28# Vdd sky130_fd_pr__pfet_01v8 w=3.375 l=0.15
++ ad=0.63p pd=3.75u as=0.37688p ps=3.6u
+x1014 #5 in_6 GND Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.42188p pd=3u as=0.21938p ps=1.65u
+x1015 #5 in_5 #4 Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.42188p pd=3u as=0.42188p ps=3u
+.ends
+
+.subckt x_0_0cell_0_0ginvx0 GND Vdd out in_0
+x1000 out in_0 GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+x1001 out in_0 Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.6 l=0.15
++ ad=0.225p pd=1.95u as=0.225p ps=1.95u
+.ends
+
+.subckt x_0_0cell_0_0ginvx1 GND Vdd out in_0
+x1000 out in_0 GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+x1001 out in_0 Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.15
++ ad=0.28125p pd=2.25u as=0.28125p ps=2.25u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0 GND Vdd in_2 in_6 in_5 in_4
++ in_3 in_2 in_1 out in_0
+x1000 GND Vdd a_131_34# Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1001 #18 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.18p ps=1.275u
+x1002 #3 in_4 out Gnd sky130_fd_pr__nfet_01v8 w=0.525 l=0.15
++ ad=0.28125p pd=2.025u as=0.32063p ps=2.4u
+x1003 a_104_30# in_2 #3 Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.30938p pd=2.025u as=0.28125p ps=2.25u
+x1004 a_31_48# in_3 #14 Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+x1005 Vdd GND #19 Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.38813p pd=2.775u as=0.16875p ps=1.65u
+x1006 out in_7 a_24_13# Gnd sky130_fd_pr__nfet_01v8 w=2.025 l=0.15
++ ad=0.32063p pd=2.4u as=0.37688p ps=2.4u
+x1007 a_15_27# in_2 #3 Gnd sky130_fd_pr__nfet_01v8 w=0.975 l=0.15
++ ad=0.41063p pd=2.55u as=0.36563p ps=2.7u
+x1008 out in_4 a_31_48# Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.405p pd=2.775u as=0.42188p ps=2.625u
+x1009 GND in_0 #3 Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.27563p pd=2.025u as=0.28125p ps=2.025u
+x1010 a_131_34# #18 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+x1011 #14 in_2 a_97_48# Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.84375p pd=5.25u as=0.42188p ps=2.625u
+x1012 a_24_13# in_6 a_15_27# Gnd sky130_fd_pr__nfet_01v8 w=2.025 l=0.15
++ ad=0.37688p pd=2.4u as=0.41063p ps=2.55u
+x1013 out in_5 a_104_30# Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.5625p pd=3.75u as=0.30938p ps=2.025u
+x1014 a_97_48# in_1 Vdd Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.42188p pd=2.625u as=0.38813p ps=2.775u
+x1015 out #18 #19 Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+x1016 Vdd in_0 out Vdd sky130_fd_pr__pfet_01v8 w=0.6 l=0.15
++ ad=0.18p pd=1.275u as=0.405p ps=2.775u
+x1017 #18 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=0.27563p ps=2.025u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2naa_032aox0 GND Vdd in_3 in_2 in_1 out in_0
+x1000 a_15_36# in_1 #7 Vdd sky130_fd_pr__pfet_01v8 w=1.725 l=0.15
++ ad=0.32063p pd=2.1u as=0.64688p ps=4.2u
+x1001 #10 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.28688p ps=2.1u
+x1002 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+x1003 a_78_18# in_3 GND Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.14062p pd=1.125u as=0.16313p ps=1.275u
+x1004 GND Vdd #12 Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.16313p pd=1.275u as=0.16875p ps=1.65u
+x1005 out in_2 #7 Vdd sky130_fd_pr__pfet_01v8 w=1.725 l=0.15
++ ad=0.27563p pd=2.1u as=0.64688p ps=4.2u
+x1006 Vdd in_0 a_15_36# Vdd sky130_fd_pr__pfet_01v8 w=1.725 l=0.15
++ ad=0.28688p pd=2.1u as=0.32063p ps=2.1u
+x1007 Vdd GND a_92_36# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1008 #12 #10 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.12938p ps=1.125u
+x1009 out in_2 a_78_18# Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.12938p pd=1.125u as=0.14062p ps=1.125u
+x1010 a_92_36# #10 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.27563p ps=2.1u
+x1011 #10 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3naaa_02ox0 GND Vdd in_3 in_2 in_1 out in_0
+x1000 a_15_28# in_1 #6 Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+x1001 #10 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.36563p ps=2.625u
+x1002 #6 in_2 a_49_28# Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.84375p pd=5.25u as=2.10938p ps=4.125u
+x1003 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+x1004 GND Vdd #12 Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+x1005 Vdd in_0 a_15_28# Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.36563p pd=2.625u as=0.42188p ps=2.625u
+x1006 Vdd GND a_94_28# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.825
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1007 #12 #10 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+x1008 a_49_28# in_3 out Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=2.10938p pd=4.125u as=0.84375p ps=5.25u
+x1009 a_94_28# #10 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+x1010 #10 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+x1011 out in_2 GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0 GND Vdd in_6 in_5 in_4 in_3 in_2
++ in_1 out in_0
+x1000 a_22_40# in_1 #12 Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+x1001 #16 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.36563p ps=2.625u
+x1002 GND Vdd a_63_26# Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.27563p pd=2.025u as=50.625f ps=0.675u
+x1003 #11 in_2 #12 Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.84375p pd=5.25u as=0.84375p ps=5.25u
+x1004 a_15_12# in_5 #5 Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.28125p pd=1.875u as=0.5625p ps=3.75u
+x1005 a_63_26# #16 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.35438p ps=3.3u
+x1006 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.135p pd=1.275u as=0.24188p ps=1.875u
+x1007 out in_3 #11 Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.35438p pd=2.625u as=0.84375p ps=5.25u
+x1008 Vdd GND a_63_40# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1009 out in_6 a_15_12# Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.24188p pd=1.875u as=0.28125p ps=1.875u
+x1010 #6 in_4 GND Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.5625p pd=3.75u as=0.27563p ps=2.025u
+x1011 #16 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=0.135p ps=1.275u
+x1012 a_63_40# #16 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.35438p ps=2.625u
+x1013 #6 in_2 #5 Gnd sky130_fd_pr__nfet_01v8 w=1.5 l=0.15
++ ad=0.5625p pd=3.75u as=0.5625p ps=3.75u
+x1014 Vdd in_0 a_22_40# Vdd sky130_fd_pr__pfet_01v8 w=2.25 l=0.15
++ ad=0.36563p pd=2.625u as=0.42188p ps=2.625u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0 GND Vdd in_2 in_3
++ in_4 in_6 in_5 in_4 in_3 in_9 in_1 out in_0
+x1000 a_79_36# in_6 a_50_36# Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.47813p pd=3.225u as=2.88563p ps=4.875u
+x1001 a_122_18# in_9 GND Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.14062p pd=1.125u as=0.28125p ps=2.25u
+x1002 #9 in_1 #10 Vdd sky130_fd_pr__pfet_01v8 w=1.05 l=0.15
++ ad=0.38813p pd=2.325u as=0.39375p ps=2.85u
+x1003 a_79_18# in_8 GND Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.14062p pd=1.125u as=0.16313p ps=1.275u
+x1004 GND Vdd #24 Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.16313p pd=1.275u as=0.16875p ps=1.65u
+x1005 a_24_36# in_3 #9 Vdd sky130_fd_pr__pfet_01v8 w=1.8 l=0.15
++ ad=0.73125p pd=4.05u as=0.38813p ps=2.325u
+x1006 #9 in_2 a_79_36# Vdd sky130_fd_pr__pfet_01v8 w=1.425 l=0.15
++ ad=0.585p pd=3.375u as=0.47813p ps=3.225u
+x1007 #22 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+x1008 a_38_36# in_4 a_33_36# Vdd sky130_fd_pr__pfet_01v8 w=3.525 l=0.15
++ ad=0.39375p pd=3.75u as=0.39375p ps=3.75u
+x1009 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=84.37501f pd=0.825u as=0.16313p ps=1.275u
+x1010 a_50_36# in_7 out Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=2.88563p pd=4.875u as=0.63563p ps=3.9u
+x1011 #22 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.45563p ps=3.225u
+x1012 out in_2 a_79_18# Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.16313p pd=1.275u as=0.14062p ps=1.125u
+x1013 a_33_36# in_2 a_24_36# Vdd sky130_fd_pr__pfet_01v8 w=3.525 l=0.15
++ ad=0.39375p pd=3.75u as=0.73125p ps=4.05u
+x1014 Vdd in_0 #9 Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.45563p pd=3.225u as=0.585p ps=3.375u
+x1015 out in_2 #10 Vdd sky130_fd_pr__pfet_01v8 w=2.1 l=0.15
++ ad=0.33188p pd=2.475u as=0.7875p ps=4.95u
+x1016 out in_5 a_38_36# Vdd sky130_fd_pr__pfet_01v8 w=3.525 l=0.15
++ ad=0.63563p pd=3.9u as=0.39375p ps=3.75u
+x1017 Vdd GND a_136_36# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1018 #24 #22 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=0.16875p pd=1.65u as=0.12938p ps=1.125u
+x1019 out in_2 a_122_18# Gnd sky130_fd_pr__nfet_01v8 w=0.75 l=0.15
++ ad=0.12938p pd=1.125u as=0.14062p ps=1.125u
+x1020 a_136_36# #22 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.33188p ps=2.475u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0 GND Vdd in_6 in_5 in_4 in_3 in_2
++ in_1 out in_0
+x1000 #5 in_3 #4 Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.42188p pd=3u as=0.42188p ps=3u
+x1001 a_63_36# #16 out Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.44438p ps=3.225u
+x1002 a_15_36# in_2 #10 Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.53438p pd=3.225u as=1.06875p ps=6.45u
+x1003 Vdd in_0 a_22_36# Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.45563p pd=3.225u as=0.53438p ps=3.225u
+x1004 #16 out GND Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.3
++ ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+x1005 a_22_36# in_1 a_15_36# Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.53438p pd=3.225u as=0.53438p ps=3.225u
+x1006 #16 out Vdd Vdd sky130_fd_pr__pfet_01v8 w=0.75 l=0.3
++ ad=0.28125p pd=2.25u as=0.45563p ps=3.225u
+x1007 #9 in_3 #10 Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=1.06875p pd=6.45u as=1.06875p ps=6.45u
+x1008 GND Vdd a_63_22# Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=1.65
++ ad=0.21938p pd=1.65u as=50.625f ps=0.675u
+x1009 out in_4 #9 Vdd sky130_fd_pr__pfet_01v8 w=2.85 l=0.15
++ ad=0.44438p pd=3.225u as=1.06875p ps=6.45u
+x1010 Vdd GND a_63_36# Vdd sky130_fd_pr__pfet_01v8 w=0.45 l=1.05
++ ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+x1011 out in_6 #4 Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.18563p pd=1.5u as=0.42188p ps=3u
+x1012 a_63_22# #16 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+x1013 #5 in_5 GND Gnd sky130_fd_pr__nfet_01v8 w=1.125 l=0.15
++ ad=0.42188p pd=3u as=0.21938p ps=1.65u
+x1014 GND in_0 out Gnd sky130_fd_pr__nfet_01v8 w=0.45 l=0.15
++ ad=84.37501f pd=0.825u as=0.18563p ps=1.5u
+.ends
+
+.subckt TOP INd[0] INd[1] INr INa Reset GND Vdd
+Xc_aC_53_6_acx4 GND Vdd c_aC_53_6_acx22_out c_aC_53_6_acx20_out
++ c_aC_53_6_acx11_out c_aC_53_6_acx14_out c_aC_53_6_acx19_out c_aC_53_6_acx23_out
++ c_aC_53_6_acx4_out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_52_6_acx11 GND Vdd c_aC_52_6_acx11_out c_aC_52_6_acx10_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx22 GND Vdd c_aC_52_6_acx22_out c_aC_52_6_acx2_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx12 GND Vdd c_aC_52_6_acx12_out c_aC_52_6_acx4_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx23 GND Vdd c_aC_52_6_acx23_out c_aC_52_6_acx22_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_53_6_acx5 GND Vdd c_aC_53_6_acx11_out c_aC_53_6_acx18_out
++ c_aC_53_6_acx19_out c_aC_53_6_acx13_out c_aC_53_6_acx23_out c_aC_53_6_acx21_out
++ c_aB_acx0_out c_aC_53_6_acx5_out c_aC_53_6_acx9_out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_53_6_acx6 GND Vdd c_aC_53_6_acx21_out c_aC_53_6_acx16_out
++ c_aC_53_6_acx20_out c_aC_53_6_acx6_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_52_6_acx13 GND Vdd c_aC_52_6_acx13_out c_aC_52_6_acx12_out
++ x_0_0cell_0_0ginvx0
+Xc_aR_52_6_acx0 GND Vdd c_aR_52_6_acx0_out c_aR_52_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx14 GND Vdd c_aC_52_6_acx14_out c_aC_52_6_acx5_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx7 GND Vdd c_aC_53_6_acx21_out c_aC_53_6_acx18_out
++ c_aC_53_6_acx20_out c_aC_53_6_acx7_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_52_6_acx1 GND Vdd c_aR_52_6_acx1_out c_aC_52_6_acx3_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx8 GND Vdd c_aC_53_6_acx8_out c_aR_53_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx15 GND Vdd c_aC_52_6_acx15_out c_aC_52_6_acx14_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx16 GND Vdd c_aC_52_6_acx16_out c_aC_51_6_acx6_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx9 GND Vdd c_aC_53_6_acx9_out Reset x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx17 GND Vdd c_aC_52_6_acx17_out c_aC_52_6_acx16_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx20 GND Vdd c_aC_51_6_acx20_out c_aC_50_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx18 GND Vdd c_aC_52_6_acx18_out c_aC_51_6_acx7_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx19 GND Vdd c_aC_52_6_acx19_out c_aC_52_6_acx18_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx10 GND Vdd c_aC_51_6_acx10_out c_aC_51_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx21 GND Vdd c_aC_51_6_acx21_out c_aC_51_6_acx20_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx11 GND Vdd c_aC_51_6_acx11_out c_aC_51_6_acx10_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx22 GND Vdd c_aC_51_6_acx22_out c_aC_51_6_acx2_out
++ x_0_0cell_0_0ginvx0
+Xc_aR_53_6_acx0 GND Vdd c_aR_53_6_acx0_out c_aR_53_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aR_53_6_acx1 GND Vdd c_aR_53_6_acx1_out c_aC_53_6_acx3_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx12 GND Vdd c_aC_51_6_acx12_out c_aC_51_6_acx4_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx23 GND Vdd c_aC_51_6_acx23_out c_aC_51_6_acx22_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx13 GND Vdd c_aC_51_6_acx13_out c_aC_51_6_acx12_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx14 GND Vdd c_aC_51_6_acx14_out c_aC_51_6_acx5_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx0 GND Vdd c_aC_50_6_acx21_out c_aC_50_6_acx22_out
++ c_aC_50_6_acx13_out c_aC_50_6_acx0_out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_51_6_acx15 GND Vdd c_aC_51_6_acx15_out c_aC_51_6_acx14_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx1 GND Vdd c_aC_50_6_acx21_out c_aC_50_6_acx14_out
++ c_aC_50_6_acx16_out c_aC_50_6_acx15_out c_aC_50_6_acx12_out c_aC_50_6_acx17_out
++ c_aC_50_6_acx1_out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_51_6_acx16 GND Vdd c_aC_51_6_acx16_out c_aC_50_6_acx6_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx2 GND Vdd c_aC_50_6_acx13_out c_aC_51_6_acx2_out
++ c_aC_50_6_acx10_out c_aC_50_6_acx12_out c_aC_50_6_acx11_out c_aC_50_6_acx15_out
++ c_aC_50_6_acx17_out c_aC_50_6_acx20_out c_aC_50_6_acx8_out INa Reset x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_51_6_acx17 GND Vdd c_aC_51_6_acx17_out c_aC_51_6_acx16_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx3 GND Vdd c_aC_50_6_acx14_out c_aC_50_6_acx17_out
++ c_aC_50_6_acx15_out c_aC_50_6_acx23_out c_aC_50_6_acx20_out c_aC_50_6_acx16_out
++ c_aC_50_6_acx3_out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_51_6_acx18 GND Vdd c_aC_51_6_acx18_out c_aC_50_6_acx7_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx20 GND Vdd c_aC_50_6_acx20_out INr x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx4 GND Vdd c_aC_50_6_acx22_out c_aC_50_6_acx20_out
++ c_aC_50_6_acx11_out c_aC_50_6_acx14_out c_aC_50_6_acx19_out c_aC_50_6_acx23_out
++ c_aC_50_6_acx4_out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_51_6_acx19 GND Vdd c_aC_51_6_acx19_out c_aC_51_6_acx18_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx21 GND Vdd c_aC_50_6_acx21_out c_aC_50_6_acx20_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_50_6_acx10 GND Vdd c_aC_50_6_acx10_out c_aC_50_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx5 GND Vdd c_aC_50_6_acx11_out c_aC_50_6_acx18_out
++ c_aC_50_6_acx19_out c_aC_50_6_acx13_out c_aC_50_6_acx23_out c_aC_50_6_acx21_out
++ c_aC_51_6_acx2_out c_aC_50_6_acx5_out c_aC_50_6_acx9_out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_50_6_acx22 GND Vdd c_aC_50_6_acx22_out INa x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx11 GND Vdd c_aC_50_6_acx11_out c_aC_50_6_acx10_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx6 GND Vdd c_aC_50_6_acx21_out c_aC_50_6_acx16_out
++ c_aC_50_6_acx20_out c_aC_50_6_acx6_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_51_6_acx0 GND Vdd c_aC_51_6_acx21_out c_aC_51_6_acx22_out
++ c_aC_51_6_acx13_out c_aC_51_6_acx0_out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_50_6_acx12 GND Vdd c_aC_50_6_acx12_out c_aC_50_6_acx4_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx23 GND Vdd c_aC_50_6_acx23_out c_aC_50_6_acx22_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_50_6_acx7 GND Vdd c_aC_50_6_acx21_out c_aC_50_6_acx18_out
++ c_aC_50_6_acx20_out c_aC_50_6_acx7_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_50_6_acx13 GND Vdd c_aC_50_6_acx13_out c_aC_50_6_acx12_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx1 GND Vdd c_aC_51_6_acx21_out c_aC_51_6_acx14_out
++ c_aC_51_6_acx16_out c_aC_51_6_acx15_out c_aC_51_6_acx12_out c_aC_51_6_acx17_out
++ c_aC_51_6_acx1_out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_50_6_acx8 GND Vdd c_aC_50_6_acx8_out c_aR_50_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx2 GND Vdd c_aC_51_6_acx13_out c_aC_52_6_acx2_out
++ c_aC_51_6_acx10_out c_aC_51_6_acx12_out c_aC_51_6_acx11_out c_aC_51_6_acx15_out
++ c_aC_51_6_acx17_out c_aC_51_6_acx20_out c_aC_51_6_acx8_out c_aC_51_6_acx2_out Reset
++ x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_50_6_acx14 GND Vdd c_aC_50_6_acx14_out c_aC_50_6_acx5_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx9 GND Vdd c_aC_50_6_acx9_out Reset x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx3 GND Vdd c_aC_51_6_acx14_out c_aC_51_6_acx17_out
++ c_aC_51_6_acx15_out c_aC_51_6_acx23_out c_aC_51_6_acx20_out c_aC_51_6_acx16_out
++ c_aC_51_6_acx3_out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_50_6_acx15 GND Vdd c_aC_50_6_acx15_out c_aC_50_6_acx14_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx16 GND Vdd c_aC_50_6_acx16_out INd[0] x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx4 GND Vdd c_aC_51_6_acx22_out c_aC_51_6_acx20_out
++ c_aC_51_6_acx11_out c_aC_51_6_acx14_out c_aC_51_6_acx19_out c_aC_51_6_acx23_out
++ c_aC_51_6_acx4_out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_51_6_acx5 GND Vdd c_aC_51_6_acx11_out c_aC_51_6_acx18_out
++ c_aC_51_6_acx19_out c_aC_51_6_acx13_out c_aC_51_6_acx23_out c_aC_51_6_acx5_in_2
++ c_aC_52_6_acx2_out c_aC_51_6_acx5_out c_aC_51_6_acx9_out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_50_6_acx17 GND Vdd c_aC_50_6_acx17_out c_aC_50_6_acx16_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx20 GND Vdd c_aC_53_6_acx20_out c_aC_52_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx18 GND Vdd c_aC_50_6_acx18_out INd[1] x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx6 GND Vdd c_aC_51_6_acx21_out c_aC_51_6_acx16_out
++ c_aC_51_6_acx20_out c_aC_51_6_acx6_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_50_6_acx0 GND Vdd c_aR_50_6_acx0_out c_aR_50_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aB_acx0 GND Vdd c_aB_acx0_out c_aB_acx1_out x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx10 GND Vdd c_aC_53_6_acx10_out c_aC_53_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx21 GND Vdd c_aC_53_6_acx21_out c_aC_53_6_acx20_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_52_6_acx0 GND Vdd c_aC_52_6_acx21_out c_aC_52_6_acx22_out
++ c_aC_52_6_acx13_out c_aC_52_6_acx0_out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_51_6_acx7 GND Vdd c_aC_51_6_acx21_out c_aC_51_6_acx18_out
++ c_aC_51_6_acx20_out c_aC_51_6_acx7_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aB_acx1 GND Vdd c_aB_acx1_out c_aB_acx1_in_0 x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx19 GND Vdd c_aC_50_6_acx19_out c_aC_50_6_acx18_out
++ x_0_0cell_0_0ginvx0
+Xc_aR_50_6_acx1 GND Vdd c_aR_50_6_acx1_out c_aC_50_6_acx3_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx11 GND Vdd c_aC_53_6_acx11_out c_aC_53_6_acx10_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx22 GND Vdd c_aC_53_6_acx22_out c_aC_53_6_acx2_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx1 GND Vdd c_aC_52_6_acx21_out c_aC_52_6_acx14_out
++ c_aC_52_6_acx16_out c_aC_52_6_acx15_out c_aC_52_6_acx12_out c_aC_52_6_acx17_out
++ c_aC_52_6_acx1_out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_51_6_acx8 GND Vdd c_aC_51_6_acx8_out c_aR_51_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx12 GND Vdd c_aC_53_6_acx12_out c_aC_53_6_acx4_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx2 GND Vdd c_aC_52_6_acx13_out c_aC_53_6_acx2_out
++ c_aC_52_6_acx10_out c_aC_52_6_acx12_out c_aC_52_6_acx11_out c_aC_52_6_acx15_out
++ c_aC_52_6_acx17_out c_aC_52_6_acx20_out c_aC_52_6_acx8_out c_aC_52_6_acx2_out Reset
++ x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_53_6_acx23 GND Vdd c_aC_53_6_acx23_out c_aC_53_6_acx22_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx9 GND Vdd c_aC_51_6_acx9_out Reset x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx13 GND Vdd c_aC_53_6_acx13_out c_aC_53_6_acx12_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx3 GND Vdd c_aC_52_6_acx14_out c_aC_52_6_acx17_out
++ c_aC_52_6_acx15_out c_aC_52_6_acx23_out c_aC_52_6_acx20_out c_aC_52_6_acx16_out
++ c_aC_52_6_acx3_out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_52_6_acx4 GND Vdd c_aC_52_6_acx22_out c_aC_52_6_acx20_out
++ c_aC_52_6_acx11_out c_aC_52_6_acx14_out c_aC_52_6_acx19_out c_aC_52_6_acx23_out
++ c_aC_52_6_acx4_out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_53_6_acx14 GND Vdd c_aC_53_6_acx14_out c_aC_53_6_acx5_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx15 GND Vdd c_aC_53_6_acx15_out c_aC_53_6_acx14_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx5 GND Vdd c_aC_52_6_acx11_out c_aC_52_6_acx18_out
++ c_aC_52_6_acx19_out c_aC_52_6_acx13_out c_aC_52_6_acx23_out c_aC_52_6_acx5_in_2
++ c_aC_53_6_acx2_out c_aC_52_6_acx5_out c_aC_52_6_acx9_out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_53_6_acx16 GND Vdd c_aC_53_6_acx16_out c_aC_52_6_acx6_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx6 GND Vdd c_aC_52_6_acx21_out c_aC_52_6_acx16_out
++ c_aC_52_6_acx20_out c_aC_52_6_acx6_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_51_6_acx0 GND Vdd c_aR_51_6_acx0_out c_aR_51_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx0 GND Vdd c_aC_53_6_acx21_out c_aC_53_6_acx22_out
++ c_aC_53_6_acx13_out c_aB_acx1_in_0 Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_53_6_acx17 GND Vdd c_aC_53_6_acx17_out c_aC_53_6_acx16_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx7 GND Vdd c_aC_52_6_acx21_out c_aC_52_6_acx18_out
++ c_aC_52_6_acx20_out c_aC_52_6_acx7_out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_51_6_acx1 GND Vdd c_aR_51_6_acx1_out c_aC_51_6_acx3_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx1 GND Vdd c_aC_53_6_acx21_out c_aC_53_6_acx14_out
++ c_aC_53_6_acx16_out c_aC_53_6_acx15_out c_aC_53_6_acx12_out c_aC_53_6_acx17_out
++ c_aC_53_6_acx1_out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_53_6_acx18 GND Vdd c_aC_53_6_acx18_out c_aC_52_6_acx7_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx8 GND Vdd c_aC_52_6_acx8_out c_aR_52_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx2 GND Vdd c_aC_53_6_acx13_out c_aB_acx0_out c_aC_53_6_acx10_out
++ c_aC_53_6_acx12_out c_aC_53_6_acx11_out c_aC_53_6_acx15_out c_aC_53_6_acx17_out
++ c_aC_53_6_acx20_out c_aC_53_6_acx8_out c_aC_53_6_acx2_out Reset x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_52_6_acx20 GND Vdd c_aC_52_6_acx20_out c_aC_51_6_acx0_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx19 GND Vdd c_aC_53_6_acx19_out c_aC_53_6_acx18_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx9 GND Vdd c_aC_52_6_acx9_out Reset x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx21 GND Vdd c_aC_52_6_acx21_out c_aC_52_6_acx20_out
++ x_0_0cell_0_0ginvx1
+Xc_aC_52_6_acx10 GND Vdd c_aC_52_6_acx10_out c_aC_52_6_acx1_out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx3 GND Vdd c_aC_53_6_acx14_out c_aC_53_6_acx17_out
++ c_aC_53_6_acx15_out c_aC_53_6_acx23_out c_aC_53_6_acx20_out c_aC_53_6_acx16_out
++ c_aC_53_6_acx3_out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+.ends
+

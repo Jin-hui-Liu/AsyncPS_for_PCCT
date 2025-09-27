@@ -1,0 +1,22 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1753015927
+<< checkpaint >>
+rect -1140 -1200 1440 1620
+rect -1140 -1215 1410 -1200
+<< psubdiff >>
+rect 120 45 150 150
+<< nsubdiff >>
+rect 120 210 150 315
+<< metal1 >>
+rect 120 300 180 360
+rect 120 60 180 120
+<< labels >>
+rlabel metal1 122 62 122 62 3 GND
+port 1 e
+rlabel metal1 122 302 122 302 3 Vdd
+port 2 e
+rlabel psubdiff 122 47 122 47 3 GND
+rlabel nsubdiff 122 212 122 212 3 Vdd
+<< end >>

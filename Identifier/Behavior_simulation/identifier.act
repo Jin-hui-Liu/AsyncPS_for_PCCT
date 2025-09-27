@@ -1,0 +1,74 @@
+defproc identifier(chan?(int<0>) reset, P1, P2, P3, P4; chan!(int<0>) O1max, O1min, O2max, O2min, O3max, O3min, O4max)
+{
+	bool flat, trend;
+	int<2> pre;
+	
+	chp{
+		*[[#P1 -> [pre=1 & trend -> O2max!; trend- 
+			[] pre=1 & ~trend -> skip
+			[] pre=0 & ~flat -> trend+; flat+
+			[] pre=0 & flat -> O1max!];  pre:=0; P1?
+
+		[] #P2 -> [pre=2 & trend -> O3max!; trend-
+			[] pre=2 & ~trend -> skip
+			[] pre=0 & ~trend -> O1min!; trend+ 
+			[] pre=0 & trend -> skip]; pre:=1; flat-; P2?
+
+		[] #P3 -> [pre=1 & ~trend -> O2min!; trend+ 
+			[] pre=1 & trend -> skip
+			[] pre=3 & trend -> O4max!; trend-];  pre:=2; P3?
+
+		[] #P4 -> [~trend -> O3min!; trend+ [] trend -> skip]; pre:=3; P4?
+		
+		[] #reset -> trend+; flat-; pre:=0; reset?
+	
+		]]
+
+	}
+}
+
+defproc source(chan!(int<0>) reset, R1, R2, R3, R4)
+{
+	chp{
+		reset!; 
+		R1!; R2!; R1!; 
+		R1!; R1!; 
+		R1!; R2!; R3!; R4!; R3!; R4!; R3!; R2!; R3!; R2!; R1!;
+		R1!; R2!; R1!; R2!; R1!
+	}
+}
+
+defproc sink(chan?(int<0>) X1max, X1min, X2max, X2min, X3max, X3min, X4max)
+{
+	chp{
+		*[[#X1max -> X1max?
+		[] #X1min -> X1min?
+		[] #X2max -> X2max?
+		[] #X2min -> X2min?
+		[] #X3max -> X3max?
+		[] #X3min -> X3min?
+		[] #X4max -> X4max?
+		]]
+	}
+}
+
+defproc test()
+{
+	identifier A;
+	source S1;
+	sink tsink;
+	
+	A.reset = S1.reset;
+	A.P1 = S1.R1;
+	A.P2 = S1.R2;
+	A.P3 = S1.R3;
+	A.P4 = S1.R4;
+	
+	A.O1max = tsink.X1max;
+	A.O1min = tsink.X1min;
+	A.O2max = tsink.X2max;
+	A.O2min = tsink.X2min;
+	A.O3max = tsink.X3max;
+	A.O3min = tsink.X3min;
+	A.O4max = tsink.X4max;
+}

@@ -1,0 +1,218 @@
+import std;
+import globals;
+
+open std::channel;
+
+defproc identifier(bd?<1> P1, P2, P3, P4; bd!<1> O1max, O1min, O2max, O2min, O3max, O3min, O4max, subreset)
+{
+	bool trend, flat, b1, b2, y;
+	bool _trend, trend2, _flat, _b1, b1n, _b2, b2n, _y;
+	
+	bool _P1_r, P1_rn, _P2_r, P2_rn, _P3_r, P3_rn, _P4_r, P4_rn;
+	bool _O1max_a, _O1min_a, _O2min_a, _O3min_a, _subreset_a;
+	bool _Reset;
+	
+	prs{
+		~Reset & ~_P1_r & ~_flat & ~y -> O1max.r+
+		Reset | P1_rn & y -> O1max.r-
+
+		~Reset & ~_P2_r & ~b1n & ~b2n & ~trend2 -> O1min.r+
+		Reset | P2_rn & b1n -> O1min.r-
+
+		~Reset & ~_P1_r & ~_b1 & ~_trend -> O2max.r+
+		Reset | P1_rn & _b1 & _trend -> O2max.r-
+
+		~Reset & ~_P3_r & ~_b1 & ~b2n & ~trend2 -> O2min.r+
+		Reset | P3_rn & _b1 & b2n -> O2min.r-
+
+		~Reset & ~_P2_r & ~b1n & ~_b2 & ~_trend -> O3max.r+
+		Reset | P2_rn & b1n & _b2 & _trend-> O3max.r-
+
+		~Reset & ~_P4_r & ~trend2 -> O3min.r+
+		Reset | P4_rn & b1n -> O3min.r-
+
+		~Reset & ~_P3_r & ~_b1 & ~_b2 -> O4max.r+
+		Reset | P3_rn & _b1 & b2n -> O4max.r-
+
+		~Reset & ~_P1_r & ~b1n & ~flat & ~y -> subreset.r+
+		Reset | P1_rn & flat & y -> subreset.r-
+
+		~_Reset | ~_O2min_a | ~_O1min_a | ~_subreset_a | ~_O3min_a -> trend+      /*Trend is set to 1*/
+		_Reset & (O4max.a | O3max.a | O2max.a) -> trend-
+
+		~Reset & ~_trend & ~_y -> flat+
+		Reset | P2_rn & _y -> flat-
+
+		~Reset & (~_P1_r & ~_b1 & ~b2n & ~trend2 | ~_subreset_a & ~_trend | ~_O1max_a) -> y+
+		Reset | _P1_r -> y-
+
+		~Reset & (~_P2_r & ~_b2 & ~trend2 | ~_P2_r & ~b2n & ~_trend | ~_trend & ~_P4_r) -> b1+
+		Reset | P3_rn & trend2 & _b2 | P3_rn & _trend & b2n | y -> b1-
+
+		~Reset & ~_P3_r & ~b1n -> b2+
+		Reset | _P3_r & P2_rn & b1n -> b2-
+
+		
+		/*Inverted variables*/
+		flat => _flat-
+		y => _y-
+		O1max.a => _O1max_a-
+		O1min.a => _O1min_a-
+		O2min.a => _O2min_a-
+		O3min.a => _O3min_a-
+		subreset.a => _subreset_a-
+		
+		Reset => _Reset-
+		
+		
+		/*Adding xxx2 signal from xxx*/
+		b1 => _b1-
+		_b1 => b1n-
+		
+		b2 => _b2-
+		_b2 => b2n-
+		
+		trend => _trend-
+		_trend => trend2-
+		
+		P1.r => _P1_r-
+		_P1_r => P1_rn-
+		
+		P2.r => _P2_r-
+		_P2_r => P2_rn-
+		
+		P3.r => _P3_r-
+		_P3_r => P3_rn-
+		
+		P4.r => _P4_r-
+		_P4_r => P4_rn-
+		
+	}
+	
+	sizing{
+		//internal variable
+		trend{-1};
+		_trend{-1};
+		trend2{-1};
+		flat{-1};
+		_flat{-1};
+		b1{-1};
+		_b1{-1};
+		b1n{-1};
+		b2{-1};
+		_b2{-1};
+		b2n{-1};
+		y{-1};
+		_y{-1};
+		
+		O1max.r{-1};
+		O1min.r{-1};
+		O2max.r{-1};
+		O2min.r{-1};
+		O3max.r{-1};
+		O3min.r{-1};
+		O4max.r{-1};
+		subreset.r{-1};
+		
+		//external variable
+		_P1_r{-1};
+		P1_rn{-1};
+		_P2_r{-1};
+		P2_rn{-1};
+		_P3_r{-1};
+		P3_rn{-1};
+		_P4_r{-1};
+		P4_rn{-1};
+		
+		_O1max_a{-1};
+		_O1min_a{-1};
+		_O2min_a{-1};
+		_O3min_a{-1};
+		_subreset_a{-1};
+		
+		_Reset{-1}
+	}
+}
+
+
+
+defproc sink(bd?<1> max1, max2, max3, max4, min1, min2, min3, reset)
+{
+	bool _max1_r, _max2_r, _max3_r, _max4_r;
+	bool _min1_r, _min2_r, _min3_r;
+	bool _reset_r;
+	
+	prs{
+		~Reset & ~_max1_r -> max1.a+
+		Reset | _max1_r -> max1.a-
+		~Reset & ~_max2_r -> max2.a+
+		Reset | _max2_r -> max2.a-
+		~Reset & ~_max3_r -> max3.a+
+		Reset | _max3_r -> max3.a-
+		~Reset & ~_max4_r -> max4.a+
+		Reset | _max4_r -> max4.a-
+		
+		~Reset & ~_min1_r -> min1.a+
+		Reset | _min1_r -> min1.a-
+		~Reset & ~_min2_r -> min2.a+
+		Reset | _min2_r -> min2.a-
+		~Reset & ~_min3_r -> min3.a+
+		Reset | _min3_r -> min3.a-
+		
+		~Reset & ~_reset_r -> reset.a+
+		Reset | _reset_r -> reset.a-
+		
+		
+		max1.r => _max1_r-
+		max2.r => _max2_r-
+		max3.r => _max3_r-
+		max4.r => _max4_r-
+		min1.r => _min1_r-
+		min2.r => _min2_r-
+		min3.r => _min3_r-
+		reset.r => _reset_r-
+	}
+	
+	sizing{
+		max1.a{-1};
+		max2.a{-1};
+		max3.a{-1};
+		max4.a{-1};
+		min1.a{-1};
+		min2.a{-1};
+		min3.a{-1};
+		reset.a{-1};
+		
+		_max1_r{-1};
+		_max2_r{-1};
+		_max3_r{-1};
+		_max4_r{-1};
+		_min1_r{-1};
+		_min2_r{-1};
+		_min3_r{-1};
+		_reset_r{-1}
+	}
+}
+
+
+defproc system(bd?<1> in1, in2, in3, in4)
+{
+	identifier A;
+	sink SUB;
+	
+	A.P1 = in1;
+	A.P2 = in2;
+	A.P3 = in3;
+	A.P4 = in4;	
+	
+	A.O1max = SUB.max1;
+	A.O1min = SUB.min1;
+	A.O2max = SUB.max2;
+	A.O2min = SUB.min2;
+	A.O3max = SUB.max3;
+	A.O3min = SUB.min3;
+	A.O4max = SUB.max4;
+	A.subreset = SUB.reset;	
+}
+
+system t;

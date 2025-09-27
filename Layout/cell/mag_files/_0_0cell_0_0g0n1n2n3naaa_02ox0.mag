@@ -1,0 +1,122 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1753015928
+<< checkpaint >>
+rect -1140 1665 2640 2100
+rect -1140 1635 2880 1665
+rect -1140 -975 2955 1635
+rect -1140 -1005 2880 -975
+rect -1140 -1170 2745 -1005
+rect -1140 -1200 2670 -1170
+<< nmos >>
+rect 300 90 330 180
+rect 405 90 465 180
+rect 705 90 1035 180
+rect 1110 90 1140 180
+rect 1380 90 1410 180
+<< pmos >>
+rect 195 285 225 735
+rect 300 285 330 735
+rect 405 285 465 435
+rect 705 285 735 735
+rect 1110 285 1140 735
+rect 1380 285 1410 375
+rect 1455 285 1620 375
+<< ndiff >>
+rect 225 90 300 180
+rect 330 90 405 180
+rect 465 90 540 180
+rect 630 90 705 180
+rect 1035 90 1110 180
+rect 1140 90 1215 180
+rect 1305 90 1380 180
+rect 1410 90 1485 180
+<< pdiff >>
+rect 120 285 195 735
+rect 225 285 300 735
+rect 330 435 390 735
+rect 330 285 405 435
+rect 465 285 540 435
+rect 630 285 705 735
+rect 735 285 1110 735
+rect 1140 285 1215 735
+rect 1305 285 1380 375
+rect 1410 285 1455 375
+rect 1620 285 1695 375
+<< poly >>
+rect 195 735 225 765
+rect 300 735 330 765
+rect 705 735 735 765
+rect 1110 735 1140 765
+rect 405 435 465 465
+rect 1380 375 1410 405
+rect 1455 375 1620 405
+rect 195 255 225 285
+rect 300 255 330 285
+rect 405 255 465 285
+rect 705 255 735 285
+rect 1110 255 1140 285
+rect 1380 255 1410 285
+rect 1455 255 1620 285
+rect 300 180 330 210
+rect 405 180 465 210
+rect 705 180 1035 210
+rect 1110 180 1140 210
+rect 1380 180 1410 210
+rect 300 60 330 90
+rect 405 60 465 90
+rect 705 60 1035 90
+rect 1110 60 1140 90
+rect 1380 60 1410 90
+<< metal1 >>
+rect 120 780 180 840
+rect 360 780 420 840
+rect 600 780 660 840
+rect 840 780 900 840
+rect 1080 780 1140 840
+rect 1320 780 1380 840
+rect 120 60 180 120
+<< labels >>
+rlabel pdiff 467 287 467 287 3 #10
+rlabel ndiff 467 92 467 92 3 #10
+rlabel poly 407 182 407 182 3 out
+rlabel poly 407 257 407 257 3 out
+rlabel ndiff 332 92 332 92 3 GND
+rlabel pdiff 332 287 332 287 3 Vdd
+rlabel poly 302 182 302 182 3 in(0)
+rlabel poly 302 257 302 257 3 in(0)
+rlabel ndiff 227 92 227 92 3 out
+rlabel poly 197 257 197 257 3 in(1)
+rlabel pdiff 122 287 122 287 3 #6
+rlabel ndiff 1142 92 1142 92 3 out
+rlabel pdiff 1142 287 1142 287 3 #6
+rlabel poly 1112 182 1112 182 3 in(2)
+rlabel poly 1112 257 1112 257 3 in(2)
+rlabel ndiff 1037 92 1037 92 3 GND
+rlabel poly 707 182 707 182 3 Vdd
+rlabel poly 707 257 707 257 3 in(3)
+rlabel ndiff 632 92 632 92 3 #12
+rlabel pdiff 632 287 632 287 3 out
+rlabel pdiff 1622 287 1622 287 3 Vdd
+rlabel poly 1457 257 1457 257 3 GND
+rlabel ndiff 1412 92 1412 92 3 #12
+rlabel poly 1382 182 1382 182 3 #10
+rlabel poly 1382 257 1382 257 3 #10
+rlabel ndiff 1307 92 1307 92 3 out
+rlabel pdiff 1307 287 1307 287 3 out
+rlabel metal1 1322 782 1322 782 3 GND
+port 1 e
+rlabel metal1 1082 782 1082 782 3 Vdd
+port 2 e
+rlabel metal1 842 782 842 782 3 in(3)
+port 3 e
+rlabel metal1 602 782 602 782 3 in(2)
+port 4 e
+rlabel metal1 362 782 362 782 3 in(1)
+port 5 e
+rlabel metal1 122 62 122 62 3 out
+port 6 e
+rlabel metal1 122 782 122 782 3 in(0)
+port 7 e
+<< end >>

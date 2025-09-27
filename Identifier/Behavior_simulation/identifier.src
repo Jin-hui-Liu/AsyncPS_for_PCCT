@@ -1,0 +1,17 @@
+watch A.reset
+watch A.P1
+watch A.P2
+watch A.P3
+watch A.P4
+
+watch A.O1max
+watch A.O1min
+
+watch A.O2max
+watch A.O2min
+
+watch A.O3max
+watch A.O3min
+
+watch A.O4max
+

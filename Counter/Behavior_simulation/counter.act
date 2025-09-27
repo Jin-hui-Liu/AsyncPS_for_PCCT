@@ -1,0 +1,45 @@
+template<pint N>
+defproc counter(chan?(int<2>) C; chan!(int<N>) O)
+{
+	int<N> a;
+	int<2> c;
+
+	chp{
+		*[C?c;
+		[  c=0 -> a:=a+1
+		[] c=1 -> a:=a-1
+		[] c=2 -> a:=0
+		[] c=3 -> O!a]
+		]
+	}
+}
+
+defproc source(chan!(int<2>) C)
+{
+	chp{
+		C!3; C!0; C!0; C!0; C!3; C!1; C!3
+	}
+}
+
+template<pint N>
+defproc sink(chan?(int<N>) X)
+{
+	int<N> x;
+
+	chp{
+		X?x; log("The counter value is now: ", x);
+		X?x; log("The counter value is now: ", x);
+		X?x; log("The counter value is now: ", x)
+	}
+}
+
+
+defproc test()
+{
+	counter<14> C;
+	source S1;
+	sink<14> tsink;
+
+	S1.C = C.C;
+	tsink.X = C.O;
+}

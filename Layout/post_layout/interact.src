@@ -1,0 +1,62 @@
+# Run this script using: interact -Tsky130l interact.src
+
+# Read the top-level file
+act:read "counter_b4.act"
+
+# Merge in the 'cells.act' file
+act:merge "cells.act"
+
+# Expand the design
+act:expand
+
+# Set the top-level for the implementation
+act:top four_bits_counter
+
+# Map it to gates and save all cells to an act file
+ckt:cell-map
+
+# Generate the transistor-level netlist from the PRS
+ckt:map
+
+
+# Set density to 55%
+define density 0.55
+# Calculate total area to be occupied per unit of effective area (1 / 0.55), multiply with 1.05 for another 5% area margin
+define area (* 1.05 (/ 1 density))
+
+# Load physical database module and create a pnr problem
+load-scm "phydb.scm"
+phydb:create area 1.0 "counter.lef"
+
+# Generate ".rect" file for all gridded cells
+act:layout:rect
+
+
+# Use dali to place cells and generate a DEF file for Magic, indicating the location information
+dali:init 3
+dali:place-design density
+dali:place-io "met1"
+dali:export-phydb
+dali:close
+
+pwroute:init 3
+pwroute:set_reinforcement 0
+pwroute:run
+pwroute:export-phydb
+pwroute:close
+
+sproute:init 3
+sproute:run
+sproute:close
+
+# Dali uses a gridded cell placement approach.
+# Therefore, wells and selects have to be superimposed once the gridded cell placement is complete. 
+# Hence, the LEF file needs to be updated to include these new parts of the design.
+phydb:write-guide "counter.guide"
+phydb:write-aux-rect "counter"
+phydb:update-lef "counter"
+
+# save the placed design
+phydb:write-def "counter.def"
+
+# TritonRoute -lef counter.lef -def counter.def -guide counter.guide -output routed

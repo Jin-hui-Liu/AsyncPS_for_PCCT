@@ -1,0 +1,20 @@
+import "NewPRS.act";
+open std::channel;
+
+/*
+defproc three_bits_counter(bd?<2> IN; bd!<2> OUT; bd!<1> READ[3])
+{
+	counter<3> c;
+	c.in = IN;
+	c.out = OUT;
+	(i:3:c.read[i] = READ[i];)
+}
+*/
+
+defproc four_bits_counter(bd?<2> IN)
+{
+	counter<4> c;
+	c.in = IN;
+}
+
+four_bits_counter t;

@@ -1,0 +1,489 @@
+* SPICE3 file created from TOP.ext - technology: sky130l
+
+.global Vdd Gnd 
+
+.subckt x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0 GND Vdd in(6) in(5) in(4) in(3)
++ in(2) in(1) out in(0)
+M1000 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+M1001 a_15_28# in_52_6 #11 w_5_25# pfet w=3.375u l=0.15u
++  ad=0.37688p pd=3.6u as=1.26563p ps=7.5u
+M1002 Vdd in_50_6 a_20_28# w_5_25# pfet w=3.375u l=0.15u
++  ad=0.53438p pd=3.75u as=0.63p ps=3.75u
+M1003 #17 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+M1004 a_106_28# in(4) #9 w_96_25# pfet w=3.375u l=0.15u
++  ad=0.63p pd=3.75u as=1.26563p ps=7.5u
+M1005 #4 in_53_6 out Gnd nfet w=1.125u l=0.15u
++  ad=0.42188p pd=3u as=0.42188p ps=3u
+M1006 #17 out Vdd w_5_25# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.53438p ps=3.75u
+M1007 #9 in_55_6 out w_96_25# pfet w=3.375u l=0.15u
++  ad=1.26563p pd=7.5u as=1.26563p ps=7.5u
+M1008 GND Vdd a_54_14# Gnd nfet w=0.45u l=1.65u
++  ad=0.21938p pd=1.65u as=50.625f ps=0.675u
+M1009 #11 in_53_6 a_106_28# w_96_25# pfet w=3.375u l=0.15u
++  ad=1.26563p pd=7.5u as=0.63p ps=3.75u
+M1010 Vdd GND a_54_28# w_5_25# pfet w=0.45u l=1.05u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1011 a_54_14# #17 out Gnd nfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+M1012 a_54_28# #17 out w_5_25# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+M1013 a_20_28# in_51_6 a_15_28# w_5_25# pfet w=3.375u l=0.15u
++  ad=0.63p pd=3.75u as=0.37688p ps=3.6u
+M1014 #5 in_56_6 GND Gnd nfet w=1.125u l=0.15u
++  ad=0.42188p pd=3u as=0.21938p ps=1.65u
+M1015 #5 in_55_6 #4 Gnd nfet w=1.125u l=0.15u
++  ad=0.42188p pd=3u as=0.42188p ps=3u
+.ends
+
+.subckt x_0_0cell_0_0ginvx0 GND Vdd out in(0)
+M1000 out in_50_6 GND Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+M1001 out in_50_6 Vdd w_5_21# pfet w=0.6u l=0.15u
++  ad=0.225p pd=1.95u as=0.225p ps=1.95u
+.ends
+
+.subckt x_0_0cell_0_0ginvx1 GND Vdd out in(0)
+M1000 out in_50_6 GND Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+M1001 out in_50_6 Vdd w_5_21# pfet w=0.75u l=0.15u
++  ad=0.28125p pd=2.25u as=0.28125p ps=2.25u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0 GND Vdd in_52_6 in(6) in(5) in(4)
++ in(3) in(2) in(1) out in(0)
+M1000 GND Vdd a_131_34# Gnd nfet w=0.45u l=1.65u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1001 #18 out Vdd w_21_45# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.18p ps=1.275u
+M1002 #3 in_54_6 out Gnd nfet w=0.525u l=0.15u
++  ad=0.28125p pd=2.025u as=0.32063p ps=2.4u
+M1003 a_104_30# in_52_6 #3 Gnd nfet w=0.75u l=0.15u
++  ad=0.30938p pd=2.025u as=0.28125p ps=2.25u
+M1004 a_31_48# in_53_6 #14 w_21_45# pfet w=2.25u l=0.15u
++  ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+M1005 Vdd GND #19 w_21_45# pfet w=0.45u l=1.05u
++  ad=0.38813p pd=2.775u as=0.16875p ps=1.65u
+M1006 out in_57_6 a_24_13# Gnd nfet w=2.025u l=0.15u
++  ad=0.32063p pd=2.4u as=0.37688p ps=2.4u
+M1007 a_15_27# in_52_6 #3 Gnd nfet w=0.975u l=0.15u
++  ad=0.41063p pd=2.55u as=0.36563p ps=2.7u
+M1008 out in_54_6 a_31_48# w_21_45# pfet w=2.25u l=0.15u
++  ad=0.405p pd=2.775u as=0.42188p ps=2.625u
+M1009 GND in_50_6 #3 Gnd nfet w=1.5u l=0.15u
++  ad=0.27563p pd=2.025u as=0.28125p ps=2.025u
+M1010 a_131_34# #18 out Gnd nfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+M1011 #14 in_52_6 a_97_48# w_21_45# pfet w=2.25u l=0.15u
++  ad=0.84375p pd=5.25u as=0.42188p ps=2.625u
+M1012 a_24_13# in_56_6 a_15_27# Gnd nfet w=2.025u l=0.15u
++  ad=0.37688p pd=2.4u as=0.41063p ps=2.55u
+M1013 out in_55_6 a_104_30# Gnd nfet w=1.5u l=0.15u
++  ad=0.5625p pd=3.75u as=0.30938p ps=2.025u
+M1014 a_97_48# in_51_6 Vdd w_21_45# pfet w=2.25u l=0.15u
++  ad=0.42188p pd=2.625u as=0.38813p ps=2.775u
+M1015 out #18 #19 w_21_45# pfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+M1016 Vdd in_50_6 out w_21_45# pfet w=0.6u l=0.15u
++  ad=0.18p pd=1.275u as=0.405p ps=2.775u
+M1017 #18 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=0.27563p ps=2.025u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2naa_032aox0 GND Vdd in(3) in(2) in(1) out in(0)
+M1000 a_15_36# in_51_6 #7 w_5_33# pfet w=1.725u l=0.15u
++  ad=0.32063p pd=2.1u as=0.64688p ps=4.2u
+M1001 #10 out Vdd w_5_33# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.28688p ps=2.1u
+M1002 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+M1003 a_78_18# in_53_6 GND Gnd nfet w=0.75u l=0.15u
++  ad=0.14062p pd=1.125u as=0.16313p ps=1.275u
+M1004 GND Vdd #12 Gnd nfet w=0.45u l=1.65u
++  ad=0.16313p pd=1.275u as=0.16875p ps=1.65u
+M1005 out in_52_6 #7 w_75_33# pfet w=1.725u l=0.15u
++  ad=0.27563p pd=2.1u as=0.64688p ps=4.2u
+M1006 Vdd in_50_6 a_15_36# w_5_33# pfet w=1.725u l=0.15u
++  ad=0.28688p pd=2.1u as=0.32063p ps=2.1u
+M1007 Vdd GND a_92_36# w_75_33# pfet w=0.45u l=1.05u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1008 #12 #10 out Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.12938p ps=1.125u
+M1009 out in_52_6 a_78_18# Gnd nfet w=0.75u l=0.15u
++  ad=0.12938p pd=1.125u as=0.14062p ps=1.125u
+M1010 a_92_36# #10 out w_75_33# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.27563p ps=2.1u
+M1011 #10 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3naaa_02ox0 GND Vdd in(3) in(2) in(1) out in(0)
+M1000 a_15_28# in_51_6 #6 w_5_25# pfet w=2.25u l=0.15u
++  ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+M1001 #10 out Vdd w_5_25# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.36563p ps=2.625u
+M1002 #6 in_52_6 a_49_28# w_5_25# pfet w=2.25u l=0.15u
++  ad=0.84375p pd=5.25u as=2.10938p ps=4.125u
+M1003 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+M1004 GND Vdd #12 Gnd nfet w=0.45u l=1.65u
++  ad=84.37501f pd=0.825u as=0.16875p ps=1.65u
+M1005 Vdd in_50_6 a_15_28# w_5_25# pfet w=2.25u l=0.15u
++  ad=0.36563p pd=2.625u as=0.42188p ps=2.625u
+M1006 Vdd GND a_94_28# w_5_25# pfet w=0.45u l=0.825u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1007 #12 #10 out Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.16875p ps=1.65u
+M1008 a_49_28# in_53_6 out w_5_25# pfet w=2.25u l=0.15u
++  ad=2.10938p pd=4.125u as=0.84375p ps=5.25u
+M1009 a_94_28# #10 out w_5_25# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+M1010 #10 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+M1011 out in_52_6 GND Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0 GND Vdd in(6) in(5) in(4) in(3) in(2)
++ in(1) out in(0)
+M1000 a_22_40# in_51_6 #12 w_12_37# pfet w=2.25u l=0.15u
++  ad=0.42188p pd=2.625u as=0.84375p ps=5.25u
+M1001 #16 out Vdd w_12_37# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.36563p ps=2.625u
+M1002 GND Vdd a_63_26# Gnd nfet w=0.45u l=1.65u
++  ad=0.27563p pd=2.025u as=50.625f ps=0.675u
+M1003 #11 in_52_6 #12 w_105_37# pfet w=2.25u l=0.15u
++  ad=0.84375p pd=5.25u as=0.84375p ps=5.25u
+M1004 a_15_12# in_55_6 #5 Gnd nfet w=1.5u l=0.15u
++  ad=0.28125p pd=1.875u as=0.5625p ps=3.75u
+M1005 a_63_26# #16 out Gnd nfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.35438p ps=3.3u
+M1006 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=0.135p pd=1.275u as=0.24188p ps=1.875u
+M1007 out in_53_6 #11 w_12_37# pfet w=2.25u l=0.15u
++  ad=0.35438p pd=2.625u as=0.84375p ps=5.25u
+M1008 Vdd GND a_63_40# w_12_37# pfet w=0.45u l=1.05u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1009 out in_56_6 a_15_12# Gnd nfet w=1.5u l=0.15u
++  ad=0.24188p pd=1.875u as=0.28125p ps=1.875u
+M1010 #6 in(4) GND Gnd nfet w=1.5u l=0.15u
++  ad=0.5625p pd=3.75u as=0.27563p ps=2.025u
+M1011 #16 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=0.135p ps=1.275u
+M1012 a_63_40# #16 out w_12_37# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.35438p ps=2.625u
+M1013 #6 in_52_6 #5 Gnd nfet w=1.5u l=0.15u
++  ad=0.5625p pd=3.75u as=0.5625p ps=3.75u
+M1014 Vdd in_50_6 a_22_40# w_12_37# pfet w=2.25u l=0.15u
++  ad=0.36563p pd=2.625u as=0.42188p ps=2.625u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0 GND Vdd in_52_6 in_53_6
++ in_54_6 in(6) in(5) in(4) in(3) in_59_6 in(1) out in(0)
+M1000 a_79_36# in_56_6 a_50_36# w_5_33# pfet w=2.85u l=0.15u
++  ad=0.47813p pd=3.225u as=2.88563p ps=4.875u
+M1001 a_122_18# in_59_6 GND Gnd nfet w=0.75u l=0.15u
++  ad=0.14062p pd=1.125u as=0.28125p ps=2.25u
+M1002 #9 in_51_6 #10 w_5_33# pfet w=1.05u l=0.15u
++  ad=0.38813p pd=2.325u as=0.39375p ps=2.85u
+M1003 a_79_18# in_58_6 GND Gnd nfet w=0.75u l=0.15u
++  ad=0.14062p pd=1.125u as=0.16313p ps=1.275u
+M1004 GND Vdd #24 Gnd nfet w=0.45u l=1.65u
++  ad=0.16313p pd=1.275u as=0.16875p ps=1.65u
+M1005 a_24_36# in_53_6 #9 w_5_33# pfet w=1.8u l=0.15u
++  ad=0.73125p pd=4.05u as=0.38813p ps=2.325u
+M1006 #9 in_52_6 a_79_36# w_5_33# pfet w=1.425u l=0.15u
++  ad=0.585p pd=3.375u as=0.47813p ps=3.225u
+M1007 #22 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+M1008 a_38_36# in_54_6 a_33_36# w_5_33# pfet w=3.525u l=0.15u
++  ad=0.39375p pd=3.75u as=0.39375p ps=3.75u
+M1009 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=84.37501f pd=0.825u as=0.16313p ps=1.275u
+M1010 a_50_36# in_57_6 out w_5_33# pfet w=2.85u l=0.15u
++  ad=2.88563p pd=4.875u as=0.63563p ps=3.9u
+M1011 #22 out Vdd w_5_33# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.45563p ps=3.225u
+M1012 out in_52_6 a_79_18# Gnd nfet w=0.75u l=0.15u
++  ad=0.16313p pd=1.275u as=0.14062p ps=1.125u
+M1013 a_33_36# in_52_6 a_24_36# w_5_33# pfet w=3.525u l=0.15u
++  ad=0.39375p pd=3.75u as=0.73125p ps=4.05u
+M1014 Vdd in_50_6 #9 w_5_33# pfet w=2.85u l=0.15u
++  ad=0.45563p pd=3.225u as=0.585p ps=3.375u
+M1015 out in_52_6 #10 w_5_33# pfet w=2.1u l=0.15u
++  ad=0.33188p pd=2.475u as=0.7875p ps=4.95u
+M1016 out in_55_6 a_38_36# w_5_33# pfet w=3.525u l=0.15u
++  ad=0.63563p pd=3.9u as=0.39375p ps=3.75u
+M1017 Vdd GND a_136_36# w_5_33# pfet w=0.45u l=1.05u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1018 #24 #22 out Gnd nfet w=0.45u l=0.15u
++  ad=0.16875p pd=1.65u as=0.12938p ps=1.125u
+M1019 out in_52_6 a_122_18# Gnd nfet w=0.75u l=0.15u
++  ad=0.12938p pd=1.125u as=0.14062p ps=1.125u
+M1020 a_136_36# #22 out w_5_33# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.33188p ps=2.475u
+.ends
+
+.subckt x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0 GND Vdd in(6) in(5) in(4) in(3) in(2)
++ in(1) out in(0)
+M1000 #5 in_53_6 #4 Gnd nfet w=1.125u l=0.15u
++  ad=0.42188p pd=3u as=0.42188p ps=3u
+M1001 a_63_36# #16 out w_5_33# pfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.44438p ps=3.225u
+M1002 a_15_36# in_52_6 #10 w_5_33# pfet w=2.85u l=0.15u
++  ad=0.53438p pd=3.225u as=1.06875p ps=6.45u
+M1003 Vdd in_50_6 a_22_36# w_5_33# pfet w=2.85u l=0.15u
++  ad=0.45563p pd=3.225u as=0.53438p ps=3.225u
+M1004 #16 out GND Gnd nfet w=0.45u l=0.3u
++  ad=0.16875p pd=1.65u as=84.37501f ps=0.825u
+M1005 a_22_36# in_51_6 a_15_36# w_5_33# pfet w=2.85u l=0.15u
++  ad=0.53438p pd=3.225u as=0.53438p ps=3.225u
+M1006 #16 out Vdd w_5_33# pfet w=0.75u l=0.3u
++  ad=0.28125p pd=2.25u as=0.45563p ps=3.225u
+M1007 #9 in_53_6 #10 w_105_33# pfet w=2.85u l=0.15u
++  ad=1.06875p pd=6.45u as=1.06875p ps=6.45u
+M1008 GND Vdd a_63_22# Gnd nfet w=0.45u l=1.65u
++  ad=0.21938p pd=1.65u as=50.625f ps=0.675u
+M1009 out in(4) #9 w_5_33# pfet w=2.85u l=0.15u
++  ad=0.44438p pd=3.225u as=1.06875p ps=6.45u
+M1010 Vdd GND a_63_36# w_5_33# pfet w=0.45u l=1.05u
++  ad=0.16875p pd=1.65u as=50.625f ps=0.675u
+M1011 out in_56_6 #4 Gnd nfet w=1.125u l=0.15u
++  ad=0.18563p pd=1.5u as=0.42188p ps=3u
+M1012 a_63_22# #16 out Gnd nfet w=0.45u l=0.15u
++  ad=50.625f pd=0.675u as=0.16875p ps=1.65u
+M1013 #5 in_55_6 GND Gnd nfet w=1.125u l=0.15u
++  ad=0.42188p pd=3u as=0.21938p ps=1.65u
+M1014 GND in_50_6 out Gnd nfet w=0.45u l=0.15u
++  ad=84.37501f pd=0.825u as=0.18563p ps=1.5u
+.ends
+
+.subckt TOP IN.d[0] IN.d[1] IN.r IN.a Reset
+Xc_aC_53_6_acx4 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx22/out c_aC_53_6_acx20/out
++ c_aC_53_6_acx11/out c_aC_53_6_acx14/out c_aC_53_6_acx19/out c_aC_53_6_acx23/out
++ c_aC_53_6_acx4/out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_52_6_acx11 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx11/out c_aC_52_6_acx10/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx22 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx22/out c_aC_52_6_acx2/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx12 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx12/out c_aC_52_6_acx4/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx23 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx23/out c_aC_52_6_acx22/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_53_6_acx5 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx11/out c_aC_53_6_acx18/out
++ c_aC_53_6_acx19/out c_aC_53_6_acx13/out c_aC_53_6_acx23/out c_aC_53_6_acx21/out
++ c_aB_acx0/out c_aC_53_6_acx5/out c_aC_53_6_acx9/out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_53_6_acx6 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx21/out c_aC_53_6_acx16/out
++ c_aC_53_6_acx20/out c_aC_53_6_acx6/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_52_6_acx13 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx13/out c_aC_52_6_acx12/out
++ x_0_0cell_0_0ginvx0
+Xc_aR_52_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_52_6_acx0/out c_aR_52_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx14 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx14/out c_aC_52_6_acx5/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx7 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx21/out c_aC_53_6_acx18/out
++ c_aC_53_6_acx20/out c_aC_53_6_acx7/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_52_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_52_6_acx1/out c_aC_52_6_acx3/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx8 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx8/out c_aR_53_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx15 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx15/out c_aC_52_6_acx14/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx16 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx16/out c_aC_51_6_acx6/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx9 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx9/out Reset x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx17 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx17/out c_aC_52_6_acx16/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx20 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx20/out c_aC_50_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx18 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx18/out c_aC_51_6_acx7/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx19 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx19/out c_aC_52_6_acx18/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx10 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx10/out c_aC_51_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx21 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx21/out c_aC_51_6_acx20/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx11 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx11/out c_aC_51_6_acx10/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx22 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx22/out c_aC_51_6_acx2/out
++ x_0_0cell_0_0ginvx0
+Xc_aR_53_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_53_6_acx0/out c_aR_53_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aR_53_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_53_6_acx1/out c_aC_53_6_acx3/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx12 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx12/out c_aC_51_6_acx4/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx23 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx23/out c_aC_51_6_acx22/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx13 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx13/out c_aC_51_6_acx12/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx14 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx14/out c_aC_51_6_acx5/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx21/out c_aC_50_6_acx22/out
++ c_aC_50_6_acx13/out c_aC_50_6_acx0/out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_51_6_acx15 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx15/out c_aC_51_6_acx14/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx21/out c_aC_50_6_acx14/out
++ c_aC_50_6_acx16/out c_aC_50_6_acx15/out c_aC_50_6_acx12/out c_aC_50_6_acx17/out
++ c_aC_50_6_acx1/out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_51_6_acx16 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx16/out c_aC_50_6_acx6/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx2 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx13/out c_aC_51_6_acx2/out
++ c_aC_50_6_acx10/out c_aC_50_6_acx12/out c_aC_50_6_acx11/out c_aC_50_6_acx15/out
++ c_aC_50_6_acx17/out c_aC_50_6_acx20/out c_aC_50_6_acx8/out IN.a Reset x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_51_6_acx17 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx17/out c_aC_51_6_acx16/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx3 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx14/out c_aC_50_6_acx17/out
++ c_aC_50_6_acx15/out c_aC_50_6_acx23/out c_aC_50_6_acx20/out c_aC_50_6_acx16/out
++ c_aC_50_6_acx3/out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_51_6_acx18 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx18/out c_aC_50_6_acx7/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx20 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx20/out IN.r x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx4 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx22/out c_aC_50_6_acx20/out
++ c_aC_50_6_acx11/out c_aC_50_6_acx14/out c_aC_50_6_acx19/out c_aC_50_6_acx23/out
++ c_aC_50_6_acx4/out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_51_6_acx19 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx19/out c_aC_51_6_acx18/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx21 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx21/out c_aC_50_6_acx20/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_50_6_acx10 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx10/out c_aC_50_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx5 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx11/out c_aC_50_6_acx18/out
++ c_aC_50_6_acx19/out c_aC_50_6_acx13/out c_aC_50_6_acx23/out c_aC_50_6_acx21/out
++ c_aC_51_6_acx2/out c_aC_50_6_acx5/out c_aC_50_6_acx9/out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_50_6_acx22 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx22/out IN.a x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx11 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx11/out c_aC_50_6_acx10/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx6 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx21/out c_aC_50_6_acx16/out
++ c_aC_50_6_acx20/out c_aC_50_6_acx6/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_51_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx21/out c_aC_51_6_acx22/out
++ c_aC_51_6_acx13/out c_aC_51_6_acx0/out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_50_6_acx12 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx12/out c_aC_50_6_acx4/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx23 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx23/out c_aC_50_6_acx22/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_50_6_acx7 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx21/out c_aC_50_6_acx18/out
++ c_aC_50_6_acx20/out c_aC_50_6_acx7/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aC_50_6_acx13 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx13/out c_aC_50_6_acx12/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx21/out c_aC_51_6_acx14/out
++ c_aC_51_6_acx16/out c_aC_51_6_acx15/out c_aC_51_6_acx12/out c_aC_51_6_acx17/out
++ c_aC_51_6_acx1/out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_50_6_acx8 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx8/out c_aR_50_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx2 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx13/out c_aC_52_6_acx2/out
++ c_aC_51_6_acx10/out c_aC_51_6_acx12/out c_aC_51_6_acx11/out c_aC_51_6_acx15/out
++ c_aC_51_6_acx17/out c_aC_51_6_acx20/out c_aC_51_6_acx8/out c_aC_51_6_acx2/out Reset
++ x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_50_6_acx14 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx14/out c_aC_50_6_acx5/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx9 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx9/out Reset x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx3 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx14/out c_aC_51_6_acx17/out
++ c_aC_51_6_acx15/out c_aC_51_6_acx23/out c_aC_51_6_acx20/out c_aC_51_6_acx16/out
++ c_aC_51_6_acx3/out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_50_6_acx15 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx15/out c_aC_50_6_acx14/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx16 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx16/out IN.d[0] x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx4 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx22/out c_aC_51_6_acx20/out
++ c_aC_51_6_acx11/out c_aC_51_6_acx14/out c_aC_51_6_acx19/out c_aC_51_6_acx23/out
++ c_aC_51_6_acx4/out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_51_6_acx5 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx11/out c_aC_51_6_acx18/out
++ c_aC_51_6_acx19/out c_aC_51_6_acx13/out c_aC_51_6_acx23/out c_aC_51_6_acx5/in(2)
++ c_aC_52_6_acx2/out c_aC_51_6_acx5/out c_aC_51_6_acx9/out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_50_6_acx17 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx17/out c_aC_50_6_acx16/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx20 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx20/out c_aC_52_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx18 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx18/out IN.d[1] x_0_0cell_0_0ginvx0
+Xc_aC_51_6_acx6 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx21/out c_aC_51_6_acx16/out
++ c_aC_51_6_acx20/out c_aC_51_6_acx6/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_50_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_50_6_acx0/out c_aR_50_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aB_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aB_acx0/out c_aB_acx1/out x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx10 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx10/out c_aC_53_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx21 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx21/out c_aC_53_6_acx20/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_52_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx21/out c_aC_52_6_acx22/out
++ c_aC_52_6_acx13/out c_aC_52_6_acx0/out Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_51_6_acx7 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx7/in(3) c_aC_51_6_acx18/out
++ c_aC_51_6_acx20/out c_aC_51_6_acx7/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aB_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aB_acx1/out c_aB_acx1/in(0) x_0_0cell_0_0ginvx0
+Xc_aC_50_6_acx19 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_50_6_acx19/out c_aC_50_6_acx18/out
++ x_0_0cell_0_0ginvx0
+Xc_aR_50_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_50_6_acx1/out c_aC_50_6_acx3/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx11 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx11/out c_aC_53_6_acx10/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx22 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx22/out c_aC_53_6_acx2/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx21/out c_aC_52_6_acx14/out
++ c_aC_52_6_acx16/out c_aC_52_6_acx15/out c_aC_52_6_acx12/out c_aC_52_6_acx17/out
++ c_aC_52_6_acx1/out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_51_6_acx8 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx8/out c_aR_51_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx12 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx12/out c_aC_53_6_acx4/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx2 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx13/out c_aC_53_6_acx2/out
++ c_aC_52_6_acx10/out c_aC_52_6_acx12/out c_aC_52_6_acx11/out c_aC_52_6_acx15/out
++ c_aC_52_6_acx17/out c_aC_52_6_acx20/out c_aC_52_6_acx8/out c_aC_52_6_acx2/out Reset
++ x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_53_6_acx23 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx23/out c_aC_53_6_acx22/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_51_6_acx9 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_51_6_acx9/out Reset x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx13 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx13/out c_aC_53_6_acx12/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx3 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx14/out c_aC_52_6_acx17/out
++ c_aC_52_6_acx15/out c_aC_52_6_acx23/out c_aC_52_6_acx20/out c_aC_52_6_acx16/out
++ c_aC_52_6_acx3/out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+Xc_aC_52_6_acx4 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx22/out c_aC_52_6_acx20/out
++ c_aC_52_6_acx11/out c_aC_52_6_acx14/out c_aC_52_6_acx19/out c_aC_52_6_acx23/out
++ c_aC_52_6_acx4/out Reset x_0_0cell_0_0g0n1n2n3n4n5naaaaa_0653aaox0
+Xc_aC_53_6_acx14 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx14/out c_aC_53_6_acx5/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx15 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx15/out c_aC_53_6_acx14/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx5 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx11/out c_aC_52_6_acx18/out
++ c_aC_52_6_acx19/out c_aC_52_6_acx13/out c_aC_52_6_acx23/out c_aC_52_6_acx5/in(2)
++ c_aC_53_6_acx2/out c_aC_52_6_acx5/out c_aC_52_6_acx9/out x_0_0cell_0_0g0n1n2n3n4naaao_025a4267aaooax0
+Xc_aC_53_6_acx16 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx16/out c_aC_52_6_acx6/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx6 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx21/out c_aC_52_6_acx16/out
++ c_aC_52_6_acx20/out c_aC_52_6_acx6/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_51_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_51_6_acx0/out c_aR_51_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx0 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx21/out c_aC_53_6_acx22/out
++ c_aC_53_6_acx13/out c_aB_acx1/in(0) Reset x_0_0cell_0_0g0n1n2n3naaa_02ox0
+Xc_aC_53_6_acx17 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx17/out c_aC_53_6_acx16/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx7 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx21/out c_aC_52_6_acx18/out
++ c_aC_52_6_acx20/out c_aC_52_6_acx7/out Reset x_0_0cell_0_0g0n1n2naa_032aox0
+Xc_aR_51_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aR_51_6_acx1/out c_aC_51_6_acx3/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx1 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx21/out c_aC_53_6_acx14/out
++ c_aC_53_6_acx16/out c_aC_53_6_acx15/out c_aC_53_6_acx12/out c_aC_53_6_acx17/out
++ c_aC_53_6_acx1/out Reset x_0_0cell_0_0g0n1n2n3naaa_04256aaaox0
+Xc_aC_53_6_acx18 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx18/out c_aC_52_6_acx7/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx8 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx8/out c_aR_52_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx2 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx13/out c_aB_acx0/out c_aC_53_6_acx10/out
++ c_aC_53_6_acx12/out c_aC_53_6_acx11/out c_aC_53_6_acx15/out c_aC_53_6_acx17/out
++ c_aC_53_6_acx20/out c_aC_53_6_acx8/out c_aC_53_6_acx2/out Reset x_0_0cell_0_0g0n1n2na3n2n4n5naaa2n6n7naaooa_082a92aoox0
+Xc_aC_52_6_acx20 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx20/out c_aC_51_6_acx0/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx19 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx19/out c_aC_53_6_acx18/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx9 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx9/out Reset x_0_0cell_0_0ginvx0
+Xc_aC_52_6_acx21 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx21/out c_aC_52_6_acx20/out
++ x_0_0cell_0_0ginvx1
+Xc_aC_52_6_acx10 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_52_6_acx10/out c_aC_52_6_acx1/out
++ x_0_0cell_0_0ginvx0
+Xc_aC_53_6_acx3 c_aB_acx1/GND c_aB_acx1/Vdd c_aC_53_6_acx14/out c_aC_53_6_acx17/out
++ c_aC_53_6_acx15/out c_aC_53_6_acx23/out c_aC_53_6_acx20/out c_aC_53_6_acx16/out
++ c_aC_53_6_acx3/out Reset x_0_0cell_0_0g0n1n2n3n4naaaa_0536aaox0
+.ends
+

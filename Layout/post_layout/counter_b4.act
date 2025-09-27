@@ -1,0 +1,166 @@
+import std;
+import globals;
+
+open std::channel;
+
+defproc onebit_counter(bd?<2> Cin; bd!<2> Cout; bd!<1> rd)
+{
+	bool x, _x, x2;
+	bool y, _y, y2;
+	bool z, _z, z2;
+	
+	bool Cin2_r, _Cin_r, Cin2_a, _Cin_a;
+	bool _Cin_d[2], Cin2_d[2];
+	bool _rd_a;
+	bool _Reset;
+	
+	prs{ 
+		~Reset & ~y2 & ~_Cin_a & ~Cin2_r -> Cout.r+
+		Reset | _Cin_a -> Cout.r-
+
+		~Reset & ~Cin2_d[0] & ~_y & ~z2 -> x+
+		Reset | _Cin_d[0] & _y & _z & Cin2_r -> x-
+
+		~Reset & (~_rd_a & ~_Cin_r | (~Cin2_d[0] & ~_Cin_r & ~z2 & ~x2) | (~_Cin_r & ~_y & ~_x)) ->  Cin.a+
+		Reset | Cout.a & _Cin_r | (y2 & _Cin_r) ->  Cin.a-
+
+		~Reset & ~_Cin_d[0] & ~_Cin_r & ~Cin2_a & ~z2 -> rd.r+      // Cin2_r is dangerous
+		Reset |  Cin2_d[0] & Cin2_a & _z -> rd.r-
+
+		~Reset & ~Cin2_a & ~Cin2_d[1] & ~_z & ~x2 & ~_Cin_r ->  y+
+		Reset | _Cin_a & _Cin_r & _z ->  y-
+
+		~_Reset | ~Cout.a & ~Cin2_r & ~Cin2_a & ~y2 ->  z+
+		_Reset & ((Cin2_r & Cin2_d[1]) | y2 | (Cin2_r & _Cin_d[1] & x2)) ->  z-
+		
+		~Reset & ~_Cin_r & ~_Cin_d[0] -> Cout.d[0]+
+		Reset | Cin2_r & _Cin_d[0] -> Cout.d[0]-
+
+		~Reset & ~_Cin_r & ~_Cin_d[1] -> Cout.d[1]+
+		Reset | Cin2_r & _Cin_d[1] -> Cout.d[1]-
+		
+		/*Inverted variables*/
+		rd.a   => _rd_a-
+		Reset => _Reset-
+		
+		/*Adding xxx2 signal from xxx*/
+		x => _x-
+		_x => x2-
+		
+		y => _y-
+		_y => y2-
+		
+		z => _z-
+		_z => z2-
+
+		Cin.d[0] => _Cin_d[0]-
+		_Cin_d[0] => Cin2_d[0]-
+
+		Cin.d[1] => _Cin_d[1]-
+		_Cin_d[1] => Cin2_d[1]-
+		
+		Cin.r => _Cin_r-
+		_Cin_r => Cin2_r-
+		
+		Cin.a => _Cin_a-
+		_Cin_a => Cin2_a-
+
+	}
+	
+	sizing{
+		Cout.r{-1};
+		Cout.d[0]{-1};
+		Cout.d[1]{-1};
+		Cout.a{-1};
+		Cin.r{-1};
+		Cin.d[0]{-1};
+		Cin.d[1]{-1};
+		Cin.a{-1};
+		rd.r{-1};
+		rd.a{-1};
+	
+		x{-1};
+		_x{-1};
+		x2{-1};
+		y{-1};
+		_y{-1};
+		y2{-1};
+		z{-1};
+		_z{-1};
+		z2{-1};
+	
+		_Cin_a{-1};
+		_Cin_r{-1};
+		_rd_a{-1};
+		(;i:2:_Cin_d[i]{-1});
+		(;i:2:Cin2_d[i]{-1});
+	
+		_Reset{-1}
+	}
+	
+	x = rd.d[0];
+}
+
+
+defproc receiver(bd?<1> Rin)
+{
+	bool bit;
+	bool _Rin_r;
+	
+	prs{
+		~_Rin_r -> Rin.a+
+		_Rin_r -> Rin.a-
+		
+		Rin.r => _Rin_r-
+	}
+	
+	sizing{
+		Rin.a{-1};
+		_Rin_r{-1}
+	}
+	
+	bit = Rin.d[0];
+}
+
+defproc MSBit(bd?<2> Bin)
+{
+	bool b0, b1;
+	bool _Bin_r;
+	
+	prs{
+		~_Bin_r -> Bin.a+
+		_Bin_r -> Bin.a-
+		
+		Bin.r => _Bin_r-
+	}
+	
+	sizing{
+		Bin.a{-1};
+		_Bin_r{-1}
+	}
+	
+	b0 = Bin.d[0];
+	b1 = Bin.d[0];
+}
+
+template<pint N>
+defproc counter(bd?<2> in)
+{
+	{N>=1 : "Counter should have at least 1 bit !!!"}; //assertion
+	
+	onebit_counter C[N];
+	receiver R[N];
+	MSBit B;
+	(i:N-1:C[i].Cout = C[i+1].Cin;)
+	C[0].Cin = in;
+	C[N-1].Cout = B.Bin;
+	(i:N:C[i].rd = R[i].Rin;)
+}
+
+defproc four_bits_counter(bd?<2> IN)
+{
+	counter<4> c;
+	c.in = IN;
+}
+
+four_bits_counter t;

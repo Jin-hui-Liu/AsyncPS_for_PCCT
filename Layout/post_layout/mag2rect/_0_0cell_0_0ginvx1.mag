@@ -1,0 +1,94 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1753103688
+<< nwell >>
+rect 75 255 345 495
+<< nmos >>
+rect 195 90 225 180
+<< pmos >>
+rect 195 300 225 450
+<< ndiff >>
+rect 120 150 195 180
+rect 120 105 135 150
+rect 180 105 195 150
+rect 120 90 195 105
+rect 225 165 300 180
+rect 225 120 240 165
+rect 285 120 300 165
+rect 225 90 300 120
+<< pdiff >>
+rect 120 420 195 450
+rect 120 375 135 420
+rect 180 375 195 420
+rect 120 300 195 375
+rect 225 375 300 450
+rect 225 330 240 375
+rect 285 330 300 375
+rect 225 300 300 330
+<< ndiffc >>
+rect 135 105 180 150
+rect 240 120 285 165
+<< pdiffc >>
+rect 135 375 180 420
+rect 240 330 285 375
+<< poly >>
+rect 195 555 330 585
+rect 195 510 255 555
+rect 300 510 330 555
+rect 195 480 330 510
+rect 195 450 225 480
+rect 195 180 225 300
+rect 195 60 225 90
+<< polycont >>
+rect 255 510 300 555
+<< locali >>
+rect 225 555 330 585
+rect 225 510 255 555
+rect 300 510 330 555
+rect 225 480 330 510
+rect 135 420 180 480
+rect 135 345 180 375
+rect 240 375 285 405
+rect 135 150 180 180
+rect 135 60 180 105
+rect 240 165 285 330
+rect 240 90 285 120
+<< viali >>
+rect 135 480 180 525
+rect 255 510 300 555
+rect 240 330 285 375
+rect 135 15 180 60
+<< metal1 >>
+rect 240 555 315 570
+rect 120 525 195 540
+rect 120 480 135 525
+rect 180 480 195 525
+rect 240 510 255 555
+rect 300 510 315 555
+rect 240 495 315 510
+rect 120 465 195 480
+rect 225 375 300 390
+rect 225 330 240 375
+rect 285 330 300 375
+rect 225 315 300 330
+rect 120 60 195 75
+rect 120 15 135 60
+rect 180 15 195 60
+rect 120 0 195 15
+<< labels >>
+rlabel ndiff 227 92 227 92 3 out
+rlabel poly 197 182 197 182 3 in(0)
+rlabel ndiff 122 92 122 92 3 GND
+rlabel pdiff 122 302 122 302 3 Vdd
+rlabel poly 197 272 197 272 3 in(0)
+rlabel pdiff 227 302 227 302 3 out
+flabel metal1 195 15 195 15 3 FreeSerif 120 0 0 0 GND
+port 1 e
+flabel metal1 150 540 150 540 1 FreeSerif 120 0 0 0 Vdd
+port 2 n
+flabel metal1 300 345 300 345 3 FreeSerif 120 0 0 0 out
+port 3 e
+flabel metal1 315 525 315 525 3 FreeSerif 120 0 0 0 in(0)
+port 4 e
+<< end >>

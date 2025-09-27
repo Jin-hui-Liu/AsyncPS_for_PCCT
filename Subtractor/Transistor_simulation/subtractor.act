@@ -1,0 +1,174 @@
+import std;
+import globals;
+
+open std::channel;
+
+defproc subtractor(bd?<1> max1, min1, max2, min2, max3, min3, max4, reset; bd!<2> O1, O2, O3, O4)
+{
+	bool b1, b2, _b1, _b2, b1n, b2n;
+	
+	bool _O1_a, _O2_a, _O3_a, _O4_a;
+	bool _max1_r, _max2_r, _max3_r, _max4_r;
+	bool _min1_r, _min2_r, _min3_r, _reset_r;
+	
+	prs{
+		~Reset & (~_max1_r & ~max1.a | ~_max2_r & ~max2.a & ~_b1 | ~_max3_r & ~max3.a & ~_b2 | ~_max4_r & ~max4.a & ~_b1 & ~_b2) -> O1.r+
+		Reset | max1.a | (max2.a & b1n) | (max3.a & b2n)| (max4.a & b1n & b2n) -> O1.r-
+
+		~Reset & (~_max2_r & ~max2.a & ~b1n | ~_max3_r & ~max3.a & ~_b1 | ~_max4_r & ~max4.a & ~b1n & ~_b2) -> O2.r+
+		Reset | max2.a & _b1 | max3.a & b1n | max4.a & _b1 & b2n -> O2.r-
+
+		~Reset & (~_max3_r & ~max3.a & ~b1n & ~b2n | ~_max4_r & ~max4.a & ~_b1 & ~b2n) -> O3.r+
+		Reset | max3.a & _b1 & _b2 | max4.a & b1n & _b2 -> O3.r-
+
+		~Reset & ~_max4_r & ~max4.a & ~b1n & ~b2n -> O4.r+
+		Reset | max4.a & _b1 & _b2 -> O4.r-
+
+		~Reset & (~_min3_r | ~_min1_r) -> b1+
+		Reset | min2.r | reset.r -> b1-
+
+		~Reset & (~_min3_r | ~_min2_r) -> b2+
+		Reset | min1.r | reset.r -> b2-
+
+		~Reset & ~_b1 & ~_b2 & ~_min3_r -> min3.a+
+		Reset | _min3_r -> min3.a-
+
+		~Reset & ~b1n & ~_b2 & ~_min2_r -> min2.a+
+		Reset | _min2_r -> min2.a-
+
+		~Reset & ~_b1 & ~b2n & ~_min1_r -> min1.a+
+		Reset | _min1_r -> min1.a-
+
+		~Reset & ~b1n & ~b2n & ~_reset_r -> reset.a+
+		Reset | _reset_r -> reset.a-
+	
+		~Reset & ~_O1_a & ~_max1_r -> max1.a+
+		Reset | _O1_a & _max1_r -> max1.a-
+
+		~Reset & (~_O1_a | ~_O2_a) & ~_max2_r -> max2.a+
+		Reset | _O1_a & _O2_a & _max2_r -> max2.a-
+
+		~Reset & (~_O1_a | ~_O2_a | ~_O3_a) & ~_max3_r -> max3.a+
+		Reset | _O1_a & _O2_a & _O3_a & _max3_r -> max3.a-
+
+		~Reset & (~_O1_a | ~_O2_a | ~_O3_a | ~_O4_a) & ~_max4_r -> max4.a+
+		Reset | _O1_a & _O2_a & _O3_a & _O4_a & _max4_r -> max4.a-
+
+		/*Inverted variables*/
+		O1.a => _O1_a-
+		O2.a => _O2_a-
+		O3.a => _O3_a-
+		O4.a => _O4_a-
+		
+		max1.r => _max1_r-
+		max2.r => _max2_r-
+		max3.r => _max3_r-
+		max4.r => _max4_r-
+		
+		min1.r => _min1_r-
+		min2.r => _min2_r-
+		min3.r => _min3_r-
+		reset.r => _reset_r-
+
+		/* Reset => _Reset- */
+		
+		
+		/*Adding xxx2 signal from xxx*/
+		b1 => _b1-
+		_b1 => b1n-
+		
+		b2 => _b2-
+		_b2 => b2n-
+	}
+	
+	sizing{
+		b1{-1};
+		_b1{-1};
+		b1n{-1};
+		b2{-1};
+		_b2{-1};
+		b2n{-1};
+		
+		O1.r{-1};
+		O2.r{-1};
+		O3.r{-1};
+		O4.r{-1};
+		min1.a{-1};
+		min2.a{-1};
+		min3.a{-1};
+		reset.a{-1};
+		max1.a{-1};
+		max2.a{-1};
+		max3.a{-1};
+		max4.a{-1};
+		
+		_O1_a{-1};
+		_O2_a{-1};
+		_O3_a{-1};
+		_O4_a{-1};
+		_max1_r{-1};
+		_max2_r{-1};
+		_max3_r{-1};
+		_max4_r{-1};
+		_min1_r{-1};
+		_min2_r{-1};
+		_min3_r{-1};
+		_reset_r{-1}
+	}
+}
+
+defproc sink(bd?<2> c1, c2, c3, c4)
+{
+	bool _c1_r, _c2_r, _c3_r, _c4_r;
+	
+	prs{
+		~Reset & ~_c1_r -> c1.a+
+		Reset | _c1_r -> c1.a-
+		~Reset & ~_c2_r -> c2.a+
+		Reset | _c2_r -> c2.a-
+		~Reset & ~_c3_r -> c3.a+
+		Reset | _c3_r -> c3.a-
+		~Reset & ~_c4_r -> c4.a+
+		Reset | _c4_r -> c4.a-
+		
+		
+		c1.r => _c1_r-
+		c2.r => _c2_r-
+		c3.r => _c3_r-
+		c4.r => _c4_r-
+	}
+	
+	sizing{
+		c1.a{-1};
+		c2.a{-1};
+		c3.a{-1};
+		c4.a{-1};
+		
+		_c1_r{-1};
+		_c2_r{-1};
+		_c3_r{-1};
+		_c4_r{-1}
+	}
+}
+
+defproc system(bd?<1> max1, min1, max2, min2, max3, min3, max4, subreset)
+{
+	subtractor SUB;
+	sink C;
+	
+	max1 = SUB.max1;
+	min1 = SUB.min1;
+	max2 = SUB.max2;
+	min2 = SUB.min2;
+	max3 = SUB.max3;
+	min3 = SUB.min3;
+	max4 = SUB.max4;
+	subreset = SUB.reset;	
+	
+	C.c1 = SUB.O1;
+	C.c2 = SUB.O2;
+	C.c3 = SUB.O3;
+	C.c4 = SUB.O4;
+}
+
+system t;
