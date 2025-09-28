@@ -33,7 +33,9 @@ make all
 
 This results in all the .rect files in "\post_layout\converted_rects". These files need to be scaled by running:
 
-`python3 scale.py ../cell_lib`
+```
+python3 scale.py ../cell_lib
+```
 
 Now we get all .rect files stored in "\post_layout\cell_lib", which can be seen as a custom cell library for the counter. Then, the PnR process can be done in "\post_layout" by running:
 ```
