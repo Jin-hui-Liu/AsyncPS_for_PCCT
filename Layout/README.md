@@ -39,6 +39,9 @@ Copy and paste the resulting lef and def files into "\post_layout\mag2ext". Here
 
 `python3 130A2L.py ../mag2ext`
 
-Now we can load the lef and def files into MagicVLSI and use the built-in command **ext2spice** to generate the netlist for post-layout simulation. Here, the netlist may exhibit different kinds of format issues when being simulated in a SPICE simulator. To test it in Eldo, we first run:
+Now we can load the lef and def files into MagicVLSI and use the built-in command **ext2spice** to generate the netlist for post-layout simulation. Here, the netlist may exhibit different kinds of format issues when being simulated in a SPICE simulator. To test it in Eldo, run:
 
 `python3 modify_netlist.py TOP.spice zzz.spice`
+
+Note that not only were there numerous formatting inconsistencies, but we also encountered missing or incorrect port definitions within subcircuits and erroneous interconnections between cell instances in the top-level module. As a result, designers must exercise great caution in thoroughly inspecting the netlist for
+formatting compliance and correctness of port connections before simulation. Therefore, we recommend using commercial tools for this "ext2spice" step to ensure robust and accurate netlist generation.
