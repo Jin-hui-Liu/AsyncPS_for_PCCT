@@ -10,8 +10,9 @@ AND2X1 and OR8X1, in the "system.act" file. They are used to construct the MEICC
 
 Given the makefile, you can get the SPICE netlist (system_meicc.sp) by running:
 
-`make prs2net`
-
+```
+make prs2net
+```
 
 
 ### Reference
