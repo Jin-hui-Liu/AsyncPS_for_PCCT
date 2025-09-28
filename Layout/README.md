@@ -10,7 +10,9 @@ necessitating the manual layout of these non-complementary cells. In our work, [
 
 In the "cell" file, "counter_b4.act" contains the PRS of the counter and instantiates a 4-bit counter. "interact.src", "magic_cmds", "makefile" and "scaling_mag.pl" can be used to generate the primary cells corresponding to the 4-bit counter, by running:
 
-`make interact`
+```
+make interact
+```
 
 After this, you could see some new files are generated:
 
@@ -25,23 +27,25 @@ Note that we used "scaling_mag.pl" instead of "mag.pl" because we used the up-to
 ### Post-layout
 After getting the completed cells, we have to first convert them back to .rect format to built a custom cell library for further PnR process. In "\post_layout\mag2rect", you could convert all the cells by running:
 
-`make all`
+```
+make all
+```
 
 This results in all the .rect files in "\post_layout\converted_rects". These files need to be scaled by running:
 
 `python3 scale.py ../cell_lib`
 
 Now we get all .rect files stored in "\post_layout\cell_lib", which can be seen as a custom cell library for the counter. Then, the PnR process can be done in "\post_layout" by running:
-
-`interact -Tsky130l interact.src`
-
+```
+interact -Tsky130l interact.src
+```
 Copy and paste the resulting lef and def files into "\post_layout\mag2ext". Here we still need the .mag files which are compatible with sky130l. In "\post_layout\mag2rect", run:
-
-`python3 130A2L.py ../mag2ext`
-
+```
+python3 130A2L.py ../mag2ext
+```
 Now we can load the lef and def files into MagicVLSI and use the built-in command **ext2spice** to generate the netlist for post-layout simulation. Here, the netlist may exhibit different kinds of format issues when being simulated in a SPICE simulator. To test it in Eldo, run:
-
-`python3 modify_netlist.py TOP.spice zzz.spice`
-
+```
+python3 modify_netlist.py TOP.spice zzz.spice
+```
 Note that not only were there numerous formatting inconsistencies, but we also encountered missing or incorrect port definitions within subcircuits and erroneous interconnections between cell instances in the top-level module. As a result, designers must exercise great caution in thoroughly inspecting the netlist for
 formatting compliance and correctness of port connections before simulation. Therefore, we recommend using commercial tools for this "ext2spice" step to ensure robust and accurate netlist generation.
